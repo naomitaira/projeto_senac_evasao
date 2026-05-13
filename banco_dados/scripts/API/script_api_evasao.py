@@ -2,39 +2,39 @@ import requests
 import pandas as pd
 import datetime
 
-url_api = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios"
-response = requests.get(url_api)
+# url_api = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios"
+# response = requests.get(url_api)
 
-print("--------------------------------------------")
+# print("--------------------------------------------")
 
-print("Status:", response.status_code)
+# print("Status:", response.status_code)
 
-if response.status_code == 200:
-    print("\nOperacao bem sucedida\n")
-else:
-    print("\nDeu algum erro na operacao\n")
+# if response.status_code == 200:
+#     print("\nOperacao bem sucedida\n")
+# else:
+#     print("\nDeu algum erro na operacao\n")
 
-print("--------------------------------------------")
+# print("--------------------------------------------")
 
-result = response.json()
+# result = response.json()
 
-# validar status da api antes de iterar
-try: 
-    requests.get(url_api).raise_for_status()
+# # validar status da api antes de iterar
+# try: 
+#     requests.get(url_api).raise_for_status()
 
-except:
-    print("Erro ao acessar a API")
-    exit()
+# except:
+#     print("Erro ao acessar a API")
+#     exit()
 
-for i in result:
-    print(i["sigla"], "-", i["nome"], "-", i["regiao"]["nome"])
+# for i in result:
+#     print(i["sigla"], "-", i["nome"], "-", i["regiao"]["nome"])
 
 
-#exemplo de autenticacao
+# #exemplo de autenticacao
 
-headers = {"Authorization" : "Bearer MEU_TOKEN"}
+# headers = {"Authorization" : "Bearer MEU_TOKEN"}
 
-response = requests.get(url_api, headers=headers)
+# response = requests.get(url_api, headers=headers)
 
 
 # # transformar resposta em Data Frame e normalizar os dados
@@ -66,3 +66,12 @@ response = requests.get(url_api, headers=headers)
 # # checar se o arquivo foi criado com sucesso
 
 # print("Operação completa!")
+
+#####################   API de Evasão Escolar   #####################
+
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("joaoassaoka/taxa-de-abandono-escolar-por-renda-mdia-brasil")
+
+print("Path to dataset files:", path)

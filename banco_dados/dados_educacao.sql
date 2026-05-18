@@ -53,4 +53,12 @@ CREATE TABLE frequencia (
     percentual_frequencia DECIMAL(5,2),
     FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno),
     FOREIGN KEY (id_disciplina) REFERENCES disciplinas(id_disciplina)
+); 
+
+CREATE TABLE indicadores (
+    id_indicador INT PRIMARY KEY AUTO_INCREMENT,
+    ano INT,
+    regiao VARCHAR(50),
+    taxa_abandono DECIMAL(5,2),
+    renda_media DECIMAL(10,2)
 );

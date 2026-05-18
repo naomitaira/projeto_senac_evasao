@@ -1,274 +1,274 @@
-TP_DEPENDENCIA,TP_LOCALIZACAO,IN_INTERNET_ALUNOS,QT_TABLET_ALUNO,IN_LABORATORIO_INFORMATICA,IN_BIBLIOTECA,IN_ALIMENTACAO,IN_REFEITORIO,IN_AGUA_POTAVEL,IN_ENERGIA_REDE_PUBLICA,IN_ESGOTO_REDE_PUBLICA,IN_BANHEIRO,IN_QUADRA_ESPORTES
-4,1,1.0,11.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,5.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,7.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,11.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,14.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,7.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,6.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,6.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,88888.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,31.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,2.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-1,1,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,6.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,6.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,3.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,2.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,22.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,5.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,120.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,2.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,3.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,3.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,3.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,3.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,29.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,7.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,3.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
-4,1,1.0,5.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,4.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,5.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,18.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,9.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,5.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
-4,1,1.0,8.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,12.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,4.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
-4,1,1.0,9.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,5.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,14.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,7.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,18.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,15.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,20.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,5.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,13.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
-4,1,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
-4,1,0.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,8.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,4.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,4.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,25.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,25.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,30.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,44.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,30.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,33.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,37.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,30.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,63.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,28.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,35.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,30.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,35.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,12.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,28.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,30.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,8.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,22.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,12.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,0.0,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,10.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0
-4,1,1.0,28.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
-4,1,1.0,28.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
+NO_REGIAO,NO_UF,NO_MUNICIPIO,NO_ENTIDADE,IN_INTERNET_ALUNOS,QT_TABLET_ALUNO,IN_LABORATORIO_INFORMATICA,IN_BIBLIOTECA,IN_ALIMENTACAO,IN_REFEITORIO,IN_AGUA_POTAVEL,IN_ENERGIA_REDE_PUBLICA,IN_ESGOTO_REDE_PUBLICA,IN_BANHEIRO,IN_QUADRA_ESPORTES
+Norte,Rondônia,Ariquemes,SENAC ARIQUEMES,Sim,11.0,Sim,Não,Não,Não,Sim,Sim,Não,Sim,Não
+Norte,Rondônia,Cacoal,SENAC-CACOAL-RO,Sim,5.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Norte,Rondônia,Jaru,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC JARU,Sim,7.0,Sim,Não,Não,Não,Sim,Sim,Não,Sim,Não
+Norte,Rondônia,Ji-Paraná,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC JI-PARANA,Sim,11.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Norte,Rondônia,Pimenta Bueno,CENTRO DE EDUCACAO PROFISSIONAL SENAC PIMENTA BUENO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Norte,Rondônia,Porto Velho,CENTRO DE EDUCACAO PROFISSIONAL SENAC ESPLANADA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Norte,Rondônia,Vilhena,SENAC VILHENA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Norte,Amazonas,Manaus,CENTRO DE FORMACAO PROFISSIONAL FERNANDO ALFREDO PEQUENO FRANCO - SENAC,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Norte,Roraima,Boa Vista,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Norte,Pará,Barcarena,NUCLEO DE EDUCACAO PROFISSIONAL DE BARCARENA - SENAC,Sim,14.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Norte,Pará,Belém,CENTRO DE EDUCACAO PROFISSIONAL PROFESSOR RAYMUNDO ALBERTO PAPALEO PAES - SENAC,Sim,7.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Norte,Amapá,Macapá,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC DRAP,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Nordeste,Maranhão,Pinheiro,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Nordeste,Ceará,Crato,CENTRO DE EDUCACAO PROFISSIONAL DE CRATO - SENAC,Sim,6.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Ceará,Sobral,CENTRO DE EDUCACAO PROFISSIONAL DE SOBRAL - SENAC,Sim,6.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Sim
+Nordeste,Rio Grande do Norte,Natal,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC ZONA SUL,Sim,88888.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Rio Grande do Norte,Natal,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC CENTRO,Sim,31.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Nordeste,Rio Grande do Norte,Natal,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC ALECRIM,Sim,0.0,Não,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Nordeste,Rio Grande do Norte,Natal,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC ZONA NORTE,Sim,0.0,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim,Não
+Nordeste,Rio Grande do Norte,Natal,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC BARREIRA ROXA,Sim,0.0,Não,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Nordeste,Pernambuco,Caruaru,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC,Não,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Pernambuco,Garanhuns,SENAC CENTRO DE FOR PROFS JOSE HENRIQUE DE BARROS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Pernambuco,Paulista,SENAC CENTRO DE FORMACAO PROFISSIONAL DO PAULISTA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Pernambuco,Petrolina,SENAC-SERVICO NACIONAL DE APREDIZAGEM COMERCIAL,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Pernambuco,Serra Talhada,CEP SENAC SERRA TALHADA,Sim,2.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Nordeste,Pernambuco,Vitória de Santo Antão,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Alagoas,Arapiraca,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC - AGRESTE,Sim,0.0,Sim,Não,Não,Sim,Sim,Sim,Não,Sim,Não
+Nordeste,Alagoas,Maceió,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC AL - UNIDADE CARLOS MILITO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Alagoas,Maceió,SENAC SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL CENTRO INTEGRADO DE HOTELARIA E TURISMO,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Sergipe,Aracaju,SENAC - CENTRO DE EDUCACAO PROFISSIONAL PROFESSOR CARLOS ALBERTO SAMPAIO,Não,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Sergipe,Itabaiana,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC ITABAIANA,Não,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Sergipe,Lagarto,SENAC - SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - LAGARTO,Não,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Sergipe,Nossa Senhora da Glória,SENAC- CENTRO DE EDUCACAO PROFISSIONAL MARIA JOSE DOS SANTOS,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Sergipe,Propriá,CENTRO DE EDUCACAO PROFISSIONAL JOSE MARCOS DE ANDRADE - SENAC,Não,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Sergipe,Tobias Barreto,CENTRO DE EDUCACAO PROFISSIONAL JOSAFA RIBEIRO DE ALMEIDA - SENAC,Não,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Bahia,Porto Seguro,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC PORTO SEGURO,Sim,6.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Bahia,Salvador,SENAC - SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL,Sim,6.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Nordeste,Bahia,Salvador,SENAC-SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL,Sim,3.0,Não,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Nordeste,Bahia,Salvador,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC,Sim,2.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Alfenas,SENAC - UNIDADE DE ENSINO TECNICO DO CEP ALFENAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Araxá,SENAC - UNIDADE DE ENSINO TECNICO DO CEP ARAXA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Barbacena,SENAC - UNIDADE DE ENSINO TECNICO DO CEP BARBACENA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Belo Horizonte,SENAC- UNIDADE DE ENSINO TECNICO DO CEP BELO HORIZONTE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Belo Horizonte,SENAC - UNIDADE DE ENSINO TECNICO DO CEP SENAC GUAJAJARAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Belo Horizonte,SENAC - UNIDADE DE ENSINO TECNICO DO CEP SENAC VENDA NOVA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Betim,SENAC - UNIDADE DE ENSINO TECNICO DO CEP BETIM,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Conselheiro Lafaiete,SENAC - UNIDADE DE ENSINO TECNICO DO CEP CONSELHEIRO LAFAIETE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Contagem,SENAC - UNIDADE DE ENSINO TECNICO DA FACULDADE SENAC MINAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Coromandel,SENAC - UNIDADE DE ENSINO TECNICO DO CEP DE COROMANDEL,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Coronel Fabriciano,SENAC - UNIDADE DE ENSINO TECNICO DO CEP CORONEL FABRICIANO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Curvelo,SENAC - UNIDADE DE ENSINO TECNICO DO CEP CURVELO,Sim,22.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Diamantina,SENAC - UNIDADE DE ENSINO TECNICO DO CEP DIAMANTINA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Divinópolis,SENAC - UNIDADE DE ENSINO TECNICO DO CEP DIVINOPOLIS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Governador Valadares,SENAC - UNIDADE DE ENSINO TECNICO DO CEP GOVERNADOR VALADARES,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Guaxupé,SENAC - UNIDADE DE ENSINO TECNICO DO CEP GUAXUPE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Ipatinga,SENAC - UNIDADE DE ENSINO TECNICO DO CEP IPATINGA,Sim,5.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Itabira,SENAC - UNIDADE DE ENSINO TECNICO DO CEP ITABIRA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Itajubá,SENAC - UNIDADE DE ENSINO TECNICO DO CEP ITAJUBA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Ituiutaba,SENAC - UNIDADE DE ENSINO TECNICO DO CEP ITUIUTABA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Juiz de Fora,SENAC - UNIDADE DE ENSINO TECNICO DO CEP JUIZ DE FORA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Lavras,SENAC - UNIDADE DE ENSINO TECNICO DO CEP LAVRAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Manhuaçu,SENAC - UNIDADE DE ENSINO TECNICO DO CEP MANHUACU,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Montes Claros,SENAC - UNIDADE DE ENSINO TECNICO DO CEP MONTES CLAROS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Patos de Minas,SENAC - UNIDADE DE ENSINO TECNICO DO CEP PATOS DE MINAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Patrocínio,SENAC - UNIDADE DE ENSINO TECNICO DO CEP SENAC PATROCINIO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Poços de Caldas,SENAC - UNIDADE DE ENSINO TECNICO DO CEP DE POCOS DE CALDAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Pouso Alegre,SENAC - UNIDADE DE ENSINO TECNICO DO CEP POUSO ALEGRE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,São João del Rei,SENAC - UNIDADE DE ENSINO TECNICO DO CEP SAO JOAO DEL REI,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Sete Lagoas,SENAC - UNIDADE DE ENSINO TECNICO DO CEP DE SETE LAGOAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Minas Gerais,Tiradentes,CENTRO DE EDUCACAO PROFISSIONAL SENAC TIRADENTES,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Três Corações,SENAC - UNIDADE DE ENSINO TECNICO DO CEP TRES CORACOES,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Uberaba,SENAC - UNIDADE DE ENSINO TECNICO DO CEP UBERABA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Uberlândia,SENAC - UNIDADE DE ENSINO TECNICO DO CEP UBERLANDIA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Minas Gerais,Varginha,SENAC - UNIDADE DE ENSINO TECNICO DO CEP VARGINHA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sudeste,Espírito Santo,Vitória,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC,Sim,120.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Barra do Piraí,SENAC BARRA DO PIRAI,Sim,0.0,Não,Não,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Barra Mansa,SENAC BARRA MANSA,Sim,0.0,Não,Não,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Cabo Frio,SENAC CABO FRIO,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Campos dos Goytacazes,SENAC CAMPOS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Itaperuna,SENAC ITAPERUNA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Macaé,SENAC MACAE,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Niterói,SENAC NITEROI,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Nova Friburgo,SENAC NOVA FRIBURGO,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Nova Iguaçu,SENAC NOVA IGUACU,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Petrópolis,SENAC PETROPOLIS,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Resende,SENAC RESENDE,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio das Ostras,SENAC RIO DAS OSTRAS,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC IRAJA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC BOTAFOGO,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC MADUREIRA,Sim,2.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC MARECHAL FLORIANO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC COPACABANA,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC BARRA DA TIJUCA,Sim,3.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC CAMPO GRANDE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Rio de Janeiro,SENAC BONSUCESSO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Santo Antônio de Pádua,SENAC SANTO ANTONIO PADUA,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,São João de Meriti,SENAC SAO JOAO DE MERITI,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Teresópolis,SENAC TERESOPOLIS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Três Rios,SENAC TRES RIOS,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,Rio de Janeiro,Volta Redonda,SENAC VOLTA REDONDA,Sim,1.0,Não,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Águas de São Pedro,SENAC HOTEL ESCOLA GRANDE HOTEL SAO PEDRO,Sim,1.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Americana,SENAC AMERICANA,Sim,3.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Araçatuba,SENAC ARACATUBA,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Araraquara,SENAC ARARAQUARA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Barretos,SENAC BARRETOS,Sim,1.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Bauru,SENAC BAURU,Sim,3.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Bebedouro,SENAC BEBEDOURO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Bertioga,SENAC BERTIOGA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Botucatu,SENAC BOTUCATU,Sim,3.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Campinas,SENAC CAMPINAS,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Campos do Jordão,SENAC HOTEL ESCOLA GRANDE HOTEL CAMPOS DO JORDAO,Sim,29.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Catanduva,SENAC CATANDUVA,Sim,7.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Franca,SENAC FRANCA,Sim,3.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Guaratinguetá,SENAC GUARATINGUETA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Guarulhos,SENAC GUARULHOS FACCINI,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Não,Não
+Sudeste,São Paulo,Guarulhos,SENAC GUARULHOS CELESTINO,Sim,5.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Itapetininga,SENAC ITAPETININGA,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Itapira,SENAC ITAPIRA,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Itu,SENAC ITU,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Jaboticabal,SENAC JABOTICABAL,Sim,4.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Jaú,SENAC JAU,Sim,5.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Jundiaí,SENAC JUNDIAI,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Limeira,SENAC LIMEIRA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Marília,SENAC MARILIA,Sim,18.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Mogi Guaçu,SENAC MOGI GUACU,Sim,9.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Osasco,SENAC OSASCO,Sim,5.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Ourinhos,SENAC OURINHOS,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Não,Não
+Sudeste,São Paulo,Pindamonhangaba,SENAC PINDAMONHANGABA,Sim,8.0,Não,Não,Não,Não,Sim,Sim,Sim,Não,Não
+Sudeste,São Paulo,Piracicaba,SENAC PIRACICABA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Presidente Prudente,SENAC PRESIDENTE PRUDENTE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Registro,SENAC REGISTRO,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Ribeirão Preto,SENAC RIBEIRAO PRETO,Sim,12.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Rio Claro,SENAC RIO CLARO,Sim,4.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Salto,SENAC SALTO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Não,Não
+Sudeste,São Paulo,Santo André,SENAC SANTO ANDRE,Sim,9.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Santos,SENAC SANTOS,Sim,5.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Bernardo do Campo,SENAC SAO BERNARDO DO CAMPO,Sim,14.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Carlos,SENAC SAO CARLOS,Sim,7.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São João da Boa Vista,SENAC SAO JOAO DA BOA VISTA,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São José do Rio Preto,SENAC SAO JOSE DO RIO PRETO,Não,18.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São José dos Campos,SENAC SAO JOSE DOS CAMPOS,Sim,10.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC TIRADENTES,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC NACOES UNIDAS,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,São Paulo,SENAC JARDIM PRIMAVERA,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC ITAQUERA,Sim,15.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC JABAQUARA,Sim,20.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC LAPA SCIPIAO,Sim,10.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC LAPA FAUSTOLO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC LAPA TITO,Não,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC ACLIMACAO,Sim,5.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC PENHA,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC FRANCISCO MATARAZZO,Sim,13.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC SANTANA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC LARGO TREZE,Sim,10.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC SAO MIGUEL PAULISTA,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Não,Não
+Sudeste,São Paulo,São Paulo,SENAC TATUAPE SERRA DE BRAGANCA,Sim,0.0,Não,Não,Não,Não,Sim,Sim,Sim,Não,Não
+Sudeste,São Paulo,São Paulo,SENAC TATUAPE CEL LUIS AMERICANO,Não,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,São Paulo,SENAC VILA PRUDENTE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Sorocaba,SENAC SOROCABA,Sim,8.0,Não,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Taboão da Serra,SENAC TABOAO DA SERRA,Sim,4.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sudeste,São Paulo,Taubaté,SENAC TAUBATE,Sim,4.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sudeste,São Paulo,Votuporanga,SENAC VOTUPORANGA,Sim,1.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Apucarana,UEPT 5 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE APUCARANA- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Arapongas,UEPT 48 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE ARAPONGAS- SENAC,Sim,25.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sul,Paraná,Bela Vista do Paraíso,UEPT 52 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE BELA VISTA DO PARAISO- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Campo Mourão,UEPT 11 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE CAMPO MOURAO- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Cascavel,UEPT 4 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE CASCAVEL- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Castro,UEPT 14 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE CASTRO- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Cornélio Procópio,UEPT 30 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE CORNELIO PROCOPIO- SENAC,Sim,25.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Curitiba,UEPT 46 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE CURITIBA PORTAO- SENAC,Sim,30.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Curitiba,UEPT 1 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE CURITIBA CENTRO- SENAC,Sim,44.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Foz do Iguaçu,UEPT 6 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE FOZ DO IGUACU- SENAC,Sim,30.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Francisco Beltrão,UEPT 16 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE FRANCISCO BELTRAO- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Guarapuava,UEPT 7 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE GUARAPUAVA- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Irati,UEPT 17 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE IRATI- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Ivaiporã,UEPT 22 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE IVAIPORA- SENAC,Sim,33.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Jacarezinho,UEPT 19 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE JACAREZINHO- SENAC,Sim,37.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Londrina,UEPT 2 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE LONDRINA CENTRO- SENAC,Sim,30.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Londrina,UEPT 42 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE LONDRINA NORTE- SENAC,Sim,63.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Marechal Cândido Rondon,UEPT 37 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE MARECHAL CANDIDO RONDON- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Maringá,UEPT 3 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE MARINGA- SENAC,Sim,28.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Matinhos,UEPT 34 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE MATINHOS CAIOBA- SENAC,Sim,35.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Medianeira,UEPT 36 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE MEDIANEIRA- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Nova Londrina,UEPT 47 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE NOVA LONDRINA- SENAC,Sim,30.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Palmas,UEPT 31 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PALMAS- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Paranaguá,UEPT 12 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PARANAGUA- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Paranavaí,UEPT 13 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PARANAVAI- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Pato Branco,UEPT 9 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PATO BRANCO- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Ponta Grossa,UEPT 8 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PONTA GROSSA- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Ponta Grossa,UEPT 50 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PONTA GROSSA ESTACAO SAUDADE- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Prudentópolis,UEPT 28 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE PRUDENTOPOLIS- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Rio Negro,UEPT 38 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE RIO NEGRO- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Santo Antônio da Platina,UEPT 21 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE SANTO ANTONIO DA PLATINA- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,São José dos Pinhais,UEPT 39 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE SAO JOSE DOS PINHAIS- SENAC,Sim,35.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,São Mateus do Sul,UEPT 29 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE SAO MATEUS DO SUL- SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Toledo,UEPT 15 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE TOLEDO- SENAC,Sim,12.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,Umuarama,UEPT 10 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE UMUARAMA- SENAC,Sim,28.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Paraná,União da Vitória,UEPT 18 - UNIDADE DE EDUCACAO PRO E TECNOLOGICA DE UNIAO DA VITORIA- SENAC,Sim,30.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Araranguá,CENTRO DE EDUCACAO PROFISSIONAL SENAC ARARANGUA,Sim,0.0,Sim,Sim,Sim,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Blumenau,FACULDADE DE TECNOLOGIA SENAC BLUMENAU,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Brusque,CENTRO DE EDUCACAO PROFISSIONAL SENAC DE BRUSQUE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Caçador,FACULDADE SENAC DE CACADOR,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sul,Santa Catarina,Canoinhas,SENAC CANOINHAS,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Chapecó,FACULDADE DE TECNOLOGIA SENAC CHAPECO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Concórdia,FACULDADE SENAC CONCORDIA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Criciúma,FACULDADE SENAC CRICIUMA,Sim,8.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Sim
+Sul,Santa Catarina,Curitibanos,SENAC SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Florianópolis,SENAC DE FLORIANOPOLIS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Florianópolis,SENAC SAUDE E BELEZA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Itajaí,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC DE ITAJAI,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Joaçaba,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC - JOACABA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Joinville,SENAC DE JOINVILLE,Sim,22.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sul,Santa Catarina,Lages,SENAC DE LAGES,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Mafra,SENAC DE MAFRA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Palhoça,CENTRO DE ED PROFISSIONAL SENAC PALHOCA,Sim,10.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Porto União,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC PORTO UNIAO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Rio do Sul,SENAC,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,São Bento do Sul,SENAC DE SAO BENTO DO SUL,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,São Miguel do Oeste,SENAC DE SAO MIGUEL DO OESTE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Sul,Santa Catarina,Tubarão,FACULDADE DE TECNOLOGIA SENAC TUBARAO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Santa Catarina,Xanxerê,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC,Sim,0.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Bagé,SENAC BAGE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Cachoeira do Sul,ESC EDUC PROF SENAC CACHOEIRA DO SUL,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Camaquã,ESC EDUC PROF SENAC CAMAQUA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Canoas,SENAC CANOAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Carazinho,EEP SENAC CARAZINHO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Caxias do Sul,SENAC CAXIAS DO SUL,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sul,Rio Grande do Sul,Cruz Alta,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC AR RS,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Erechim,SENAC - SERV NAC APREND COMERCIAL - ERECHIM,Sim,1.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Farroupilha,EEP SENAC FARROUPILHA,Sim,10.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Gravataí,SENAC GRAVATAI,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Ijuí,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC IJUI,Sim,10.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Montenegro,EEP SENAC MONTENEGRO,Sim,12.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Novo Hamburgo,SENAC NOVO HAMBURGO,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Passo Fundo,ESCOLA DE EDUCACAO PROFISSIONAL SENAC PASSO FUNDO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Pelotas,ESCOLA DE EDUCACAO PROFISSIONAL SENAC PELOTAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Porto Alegre,SENAC TECH,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Porto Alegre,EEP SENAC COMUNIDADE,Sim,0.0,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Porto Alegre,SENAC RIO GRANDE DO SUL,Não,1.0,Não,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Porto Alegre,SENAC SAUDE,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Rio Grande,SENAC RIO GRANDE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Santa Cruz do Sul,ESCOLA DE ENSINO MEDIO E TECNICO SENAC SANTA CRUZ,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Santa Maria,SENAC SANTA MARIA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Sant'Ana do Livramento,EEP SENAC SANTANA DO LIVRAMENTO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Santa Rosa,ESC EDUC PROF SENAC SANTA ROSA,Sim,10.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Santo Ângelo,EEP SENAC SANTO ANGELO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,São Leopoldo,EEP SENAC SAO LEOPOLDO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim
+Sul,Rio Grande do Sul,São Luiz Gonzaga,EEP SENAC SAO LUIZ GONZAGA,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Taquara,ESC EDUC PROF SENAC TAQUARA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Tramandaí,ESC EDUC PROF SENAC - TRAMANDAI,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Uruguaiana,ESCOLA DE EDUCACAO PROFISSIONAL SENAC URUGUAIANA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Sul,Rio Grande do Sul,Viamão,EEP SENAC VIAMAO,Sim,10.0,Sim,Sim,Não,Não,Sim,Sim,Não,Sim,Não
+Centro-Oeste,Mato Grosso do Sul,Campo Grande,CENTRO DE EDUCACAO PROFISSIONAL - SENAC CAMPO GRANDE,Sim,28.0,Sim,Sim,Não,Sim,Sim,Não,Sim,Sim,Não
+Centro-Oeste,Mato Grosso do Sul,Campo Grande,CENTRO DE EDUCACAO PROFISSIONAL-SENAC TURISMO E GASTRONOMIA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Mato Grosso do Sul,Corumbá,CENTRO DE EDUCACAO PROFISSIONAL - SENAC CORUMBA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Mato Grosso do Sul,Dourados,CENTRO DE EDUCACAO PROFISSIONAL - SENAC DOURADOS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Mato Grosso do Sul,Ponta Porã,SENAC PONTA PORA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Mato Grosso do Sul,Três Lagoas,CENTRO DE EDUCACAO PROFISSIONAL - SENAC TRES LAGOAS,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Mato Grosso,Sinop,CEP SENAC SINOP,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Aparecida de Goiânia,SENAC - CENTRO DE EDUCACAO PROFISSIONAL EM APARECIDA DE GOIANIA,Sim,1.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Caldas Novas,SENAC - CENTRO DE EDUCACAO PROFISSIONAL VALERIA JAIME PEIXOTO PERILLO,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Catalão,SENAC - CENTRO DE EDUCACAO PROFISSIONAL CATALAO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Goiânia,SENAC - CENTRO EDUCACAO PROFISSIONAL CORA CORALINA,Sim,0.0,Sim,Sim,Não,Sim,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Goiânia,SENAC - CENTRO DE EDUCACAO PROFISSIONAL ELIAS BUFAICAL,Sim,0.0,Sim,Não,Não,Sim,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Jataí,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Mineiros,CENTRO DE EDUCACAO PROFISSIONAL DONA NICINHA - SENAC,Sim,0.0,Sim,Não,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Goiás,Quirinópolis,SENAC CENTRO DE EDUCACAO PROFIS ONICIO RESENDE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Distrito Federal,Brasília,C DE EDUC PROFISSIONAL SENAC - PLANO PILOTO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Distrito Federal,Brasília,CEP SENAC - TAGUATINGA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Distrito Federal,Brasília,SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC JOAQUIM LOIOLA - GAMA,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Distrito Federal,Brasília,C DE EDUC PROFISSIONAL SENAC TECNOLOGIA DO TURISMO E HOSPITALIDADE,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Distrito Federal,Brasília,C DE EDUC PROFISSIONAL SENAC - SOBRADINHO,Sim,0.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não
+Centro-Oeste,Distrito Federal,Brasília,C DE EDUC PROFISSIONAL SENAC - JESSE FREIRE,Sim,28.0,Sim,Sim,Não,Não,Sim,Sim,Sim,Sim,Não

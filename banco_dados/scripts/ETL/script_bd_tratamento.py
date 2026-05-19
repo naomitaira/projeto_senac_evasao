@@ -32,6 +32,7 @@ df_limpo1 = df1[colunas_relevantes].replace('', pd.NA).dropna(how='any')
 df_limpo2 = df2[colunas_relevantes].replace('', pd.NA).dropna(how='any')
 
 # Substituir 0/1 por Não/Sim nas colunas booleanas
+
 colunas_booleanas = [
     'IN_INTERNET_ALUNOS',
     'IN_LABORATORIO_INFORMATICA',

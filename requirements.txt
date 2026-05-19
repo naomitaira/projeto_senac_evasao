@@ -26,4 +26,3 @@ six==1.17.0
 tqdm==4.67.3
 tzdata==2026.2
 urllib3==2.6.3
-vboxapi==1.0

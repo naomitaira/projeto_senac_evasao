@@ -194,3 +194,37 @@ df_limpo3.to_csv(r'sp/dados_limpos/censo_escolar_2024_limpo.csv', index=False, e
 
 
 print('Arquivos foram limpos e salvos com sucesso!')
+
+# Ajustar os dados para agrupar por município 
+
+infra_2022 = (
+    df_limpo1
+    .groupby('Municipio')
+    [
+        [
+            'Acesso à internet para alunos',
+            'Quantidade de tablets para alunos',
+            'Acesso ao Laboratório de informática',
+            'Acesso à Biblioteca',
+            'Acesso à Alimentação',
+            'Acesso ao Refeitório',
+            'Acesso à Água potável',
+            'Acesso à Energia elétrica da rede pública',
+            'Acesso à Esgoto da rede pública',
+            'Acesso ao Banheiro',
+            'Acesso à Quadra de esportes'
+        ]
+    ]
+    .mean()
+    .reset_index()
+)
+
+# Salvar o resultado em um novo arquivo csv 
+
+infra_2022.to_csv(
+    r'sp/dados_limpos/infraestrutura_2022.csv',
+    sep=';',
+    decimal=',',
+    index=False,
+    encoding='utf-8'
+)

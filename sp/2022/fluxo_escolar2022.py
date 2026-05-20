@@ -1,4 +1,3 @@
-# 1. IMPORTS (sempre no topo)
 import os
 import pandas as pd
 import seaborn as sns

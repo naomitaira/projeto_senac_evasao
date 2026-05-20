@@ -49,7 +49,7 @@ df_limpo2 = selecionar_colunas_existentes(df_censo_2023, colunas_relevantes)
 df_limpo3 = selecionar_colunas_existentes(df_censo_2024, colunas_relevantes)
 
 
-# ##################### CALCULAR PERCENTUAIS DE INFRAESTRUTURA POR UF #####################
+# ##################### CALCULAR PERCENTUAIS DE INFRAESTRUTURA POR MUNICÍPIO #####################
 
 
 colunas_percentuais = [

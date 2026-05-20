@@ -65,24 +65,62 @@ colunas_percentuais = [
     'IN_QUADRA_ESPORTES'
 ]
 
-
-df_combinado = pd.concat([df_limpo1, df_limpo2, df_limpo3], ignore_index=True)
-
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio.csv', 'w', newline='', encoding='utf-8') as f:
+def calcular_percentuais_infraestrutura(df, f):
 
     for coluna in colunas_percentuais:
-        if coluna in df_combinado.columns:
-            coluna_nome = coluna.replace('IN_', '').replace('QT_', '').replace('_', ' ')
-            percentuais = (
-                df_combinado.groupby('NO_MUNICIPIO')[coluna]
-                .mean()
-                .mul(100)
-                .round(1)
-                .sort_values(ascending=False)
-            )
 
-            f.write(f'\nPercentual de escolas com {coluna_nome}:\n')
-            percentuais.to_csv(f, header=True)
+        coluna_nome = coluna.replace('IN_', '').replace('QT_', '').replace('_', ' ')
+
+        percentuais = (
+            df.groupby('NO_MUNICIPIO')[coluna]
+            .mean()
+            .mul(100)
+            .round(1)
+            .sort_values(ascending=False)
+        )
+
+        f.write(f'\nPercentual de escolas com {coluna_nome}:\n')
+
+        percentuais.to_csv(f, header=True)
+
+# Criar pasta de saída se não existir
+
+os.makedirs(r'sp/dados_limpos', exist_ok=True)
+
+# Criar os arquivos de percentuais por município para cada ano
+
+# 2022
+                
+with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2022.csv',
+          'w',
+          newline='',
+          encoding='utf-8') as f:
+
+    f.write('Município,Percentual\n')
+
+    calcular_percentuais_infraestrutura(df_limpo1, f)
+    
+# 2023
+    
+with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2023.csv',
+          'w',
+          newline='',
+          encoding='utf-8') as f:
+    
+    f.write('Município,Percentual\n')
+    
+    calcular_percentuais_infraestrutura(df_limpo2, f)
+    
+# 2024
+    
+with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2024.csv',
+          'w',
+          newline='',
+          encoding='utf-8') as f:
+    
+    f.write('Município,Percentual\n')
+        
+    calcular_percentuais_infraestrutura(df_limpo3, f)
 
 
 colunas_booleanas = [
@@ -111,10 +149,6 @@ mapeamento_para_sim_nao = {
 df_limpo1[colunas_booleanas] = df_limpo1[colunas_booleanas].replace(mapeamento_para_sim_nao)
 df_limpo2[colunas_booleanas] = df_limpo2[colunas_booleanas].replace(mapeamento_para_sim_nao)
 df_limpo3[colunas_booleanas] = df_limpo3[colunas_booleanas].replace(mapeamento_para_sim_nao)
-
-
-# Criar pasta de saída se não existir
-os.makedirs(r'sp/dados_limpos', exist_ok=True)
 
 
 # Salvar o resultado em um novo arquivo

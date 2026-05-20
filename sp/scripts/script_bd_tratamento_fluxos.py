@@ -82,17 +82,17 @@ df5 = df5.dropna(axis=0, how='any')
 df6 = df6.dropna(axis=0, how='any')
 
 # Criar pasta de saída se não existir
-os.makedirs(r'sp/bd/dados_limpos', exist_ok=True)
+os.makedirs(r'sp/dados_limpos', exist_ok=True)
 
 
 # Salvar o resultado em um novo arquivo csv
 
-df1.to_csv(r'sp/bd/dados_limpos/fluxo_escolar_escola_2022_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
-df2.to_csv(r'sp/bd/dados_limpos/fluxo_escolar_escola_2023_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
-df3.to_csv(r'sp/bd/dados_limpos/fluxo_escolar_escola_2024_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
-df4.to_csv(r'sp/bd/dados_limpos/fluxo_escolar_municipio_2022_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
-df5.to_csv(r'sp/bd/dados_limpos/fluxo_escolar_municipio_2023_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
-df6.to_csv(r'sp/bd/dados_limpos/fluxo_escolar_municipio_2024_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
+df1.to_csv(r'sp/dados_limpos/fluxo_escolar_escola_2022_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
+df2.to_csv(r'sp/dados_limpos/fluxo_escolar_escola_2023_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
+df3.to_csv(r'sp/dados_limpos/fluxo_escolar_escola_2024_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
+df4.to_csv(r'sp/dados_limpos/fluxo_escolar_municipio_2022_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
+df5.to_csv(r'sp/dados_limpos/fluxo_escolar_municipio_2023_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
+df6.to_csv(r'sp/dados_limpos/fluxo_escolar_municipio_2024_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
 
 print(f'Arquivos foram limpos e salvos')
 

@@ -55,7 +55,7 @@ df_limpo1[colunas_booleanas] = df_limpo1[colunas_booleanas].replace(mapeamento_p
 df_limpo2[colunas_booleanas] = df_limpo2[colunas_booleanas].replace(mapeamento_para_sim_nao)
 
 # Criar pasta de saída se não existir
-os.makedirs('banco_dados/scripts/etl/bd/dados_limpos', exist_ok=True)
+os.makedirs('banco_dados/scripts/etl/dados_limpos', exist_ok=True)
 
 # Salvar o resultado em um novo arquivo 
 

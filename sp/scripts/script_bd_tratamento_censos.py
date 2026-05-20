@@ -5,27 +5,6 @@ import csv
 
 ##################### TRATAR CENSOS ESCOLARES #####################
 
-
-# Colunas que realmente precisamos (ajuda o pandas a carregar mais rápido se filtrarmos depois)
-colunas_relevantes = [
-    'NO_REGIAO',
-    'NO_UF',
-    'NO_MUNICIPIO',
-    'NO_ENTIDADE',
-    'IN_INTERNET_ALUNOS',
-    'QT_TABLET_ALUNO',
-    'IN_LABORATORIO_INFORMATICA',
-    'IN_BIBLIOTECA',
-    'IN_ALIMENTACAO',
-    'IN_REFEITORIO',
-    'IN_AGUA_POTAVEL',
-    'IN_ENERGIA_REDE_PUBLICA',
-    'IN_ESGOTO_REDE_PUBLICA',
-    'IN_BANHEIRO',
-    'IN_QUADRA_ESPORTES'
-]
-
-
 print("Carregando Censo 2022... (Isso pode levar um tempinho)")
 df_censo_2022 = pd.read_csv(r'sp\2022\microdados_ed_basica_2022.csv', sep=';', encoding='latin-1', on_bad_lines='skip', low_memory=False)
 
@@ -36,6 +15,65 @@ df_censo_2023 = pd.read_csv(r'sp\2023\microdados_ed_basica_2023.csv', sep=';', e
 
 print("Carregando Censo 2024...")
 df_censo_2024 = pd.read_csv(r'sp\2024\microdados_ed_basica_2024.csv', sep=';', encoding='latin-1', on_bad_lines='skip', low_memory=False)
+
+# Colunas que realmente precisamos (ajuda o pandas a carregar mais rápido se filtrarmos depois)
+
+
+def renomear_colunas(df):
+
+    renomear_colunas = {
+        'NO_REGIAO': 'Região',
+        'NO_UF': 'UF',
+        'NO_MUNICIPIO': 'Municipio',
+        'IN_INTERNET_ALUNOS': 'Acesso à internet para alunos',
+        'QT_TABLET_ALUNO': 'Quantidade de tablets para alunos',
+        'IN_LABORATORIO_INFORMATICA': 'Acesso ao Laboratório de informática',
+        'IN_BIBLIOTECA': 'Acesso à Biblioteca',
+        'IN_ALIMENTACAO': 'Acesso à Alimentação',
+        'IN_REFEITORIO': 'Acesso ao Refeitório',
+        'IN_AGUA_POTAVEL': 'Acesso à Água potável',
+        'IN_ENERGIA_REDE_PUBLICA': 'Acesso à Energia elétrica da rede pública',
+        'IN_ESGOTO_REDE_PUBLICA': 'Acesso à Esgoto da rede pública',
+        'IN_BANHEIRO': 'Acesso ao Banheiro',
+        'IN_QUADRA_ESPORTES': 'Acesso à Quadra de esportes'
+    }
+
+    return df.rename(columns=renomear_colunas)
+
+df_censo_2022 = renomear_colunas(df_censo_2022)
+df_censo_2023 = renomear_colunas(df_censo_2023)
+df_censo_2024 = renomear_colunas(df_censo_2024)
+
+colunas_relevantes = [
+    'Região',
+    'UF',
+    'Municipio',
+    'Acesso à internet para alunos',
+    'Quantidade de tablets para alunos',
+    'Acesso ao Laboratório de informática',
+    'Acesso à Biblioteca',
+    'Acesso à Alimentação',
+    'Acesso ao Refeitório',
+    'Acesso à Água potável',
+    'Acesso à Energia elétrica da rede pública',
+    'Acesso à Esgoto da rede pública',
+    'Acesso ao Banheiro',
+    'Acesso à Quadra de esportes'
+]
+
+colunas_percentuais = [
+    'Acesso à internet para alunos',
+    'Acesso ao Laboratório de informática',
+    'Acesso à Biblioteca',
+    'Acesso à Alimentação',
+    'Acesso ao Refeitório',
+    'Acesso à Água potável',
+    'Acesso à Energia elétrica da rede pública',
+    'Acesso à Esgoto da rede pública',
+    'Acesso ao Banheiro',
+    'Acesso à Quadra de esportes'
+]
+
 
 
 # Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
@@ -53,35 +91,32 @@ df_limpo3 = selecionar_colunas_existentes(df_censo_2024, colunas_relevantes)
 
 
 colunas_percentuais = [
-    'IN_INTERNET_ALUNOS',
-    'IN_LABORATORIO_INFORMATICA',
-    'IN_BIBLIOTECA',
-    'IN_ALIMENTACAO',
-    'IN_REFEITORIO',
-    'IN_AGUA_POTAVEL',
-    'IN_ENERGIA_REDE_PUBLICA',
-    'IN_ESGOTO_REDE_PUBLICA',
-    'IN_BANHEIRO',
-    'IN_QUADRA_ESPORTES'
+    'Acesso à internet para alunos',
+    'Acesso ao Laboratório de informática',
+    'Acesso à Biblioteca',
+    'Acesso à Alimentação',
+    'Acesso ao Refeitório',
+    'Acesso à Água potável',
+    'Acesso à Energia elétrica da rede pública',
+    'Acesso à Esgoto da rede pública',
+    'Acesso ao Banheiro',
+    'Acesso à Quadra de esportes'
 ]
+def calcular_percentuais_infraestrutura(df):
 
-def calcular_percentuais_infraestrutura(df, f):
+    infraestrutura = (
+        df.groupby('Municipio')[colunas_percentuais]
+        .mean()
+        .mul(100)
+        .round(1)
+        .reset_index()
+    )
 
-    for coluna in colunas_percentuais:
+    return infraestrutura
 
-        coluna_nome = coluna.replace('IN_', '').replace('QT_', '').replace('_', ' ')
-
-        percentuais = (
-            df.groupby('NO_MUNICIPIO')[coluna]
-            .mean()
-            .mul(100)
-            .round(1)
-            .sort_values(ascending=False)
-        )
-
-        f.write(f'\nPercentual de escolas com {coluna_nome}:\n')
-
-        percentuais.to_csv(f, header=True)
+infra_2022 = calcular_percentuais_infraestrutura(df_limpo1)
+infra_2023 = calcular_percentuais_infraestrutura(df_limpo2)
+infra_2024 = calcular_percentuais_infraestrutura(df_limpo3)
 
 # Criar pasta de saída se não existir
 
@@ -98,7 +133,7 @@ with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2022.csv',
 
     f.write('Município,Percentual\n')
 
-    calcular_percentuais_infraestrutura(df_limpo1, f)
+    infra_2022.to_csv(f, header=False, index=False)
     
 # 2023
     
@@ -109,7 +144,7 @@ with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2023.csv',
     
     f.write('Município,Percentual\n')
     
-    calcular_percentuais_infraestrutura(df_limpo2, f)
+    infra_2023.to_csv(f, header=False, index=False)
     
 # 2024
     
@@ -120,20 +155,20 @@ with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2024.csv',
     
     f.write('Município,Percentual\n')
         
-    calcular_percentuais_infraestrutura(df_limpo3, f)
+    infra_2024.to_csv(f, header=False, index=False)
 
 
 colunas_booleanas = [
-    'IN_INTERNET_ALUNOS',
-    'IN_LABORATORIO_INFORMATICA',
-    'IN_BIBLIOTECA',
-    'IN_ALIMENTACAO',
-    'IN_REFEITORIO',
-    'IN_AGUA_POTAVEL',
-    'IN_ENERGIA_REDE_PUBLICA',
-    'IN_ESGOTO_REDE_PUBLICA',
-    'IN_BANHEIRO',
-    'IN_QUADRA_ESPORTES'
+    'Acesso à internet para alunos',
+    'Acesso ao Laboratório de informática',
+    'Acesso à Biblioteca',
+    'Acesso à Alimentação',
+    'Acesso ao Refeitório',
+    'Acesso à Água potável',
+    'Acesso à Energia elétrica da rede pública',
+    'Acesso à Esgoto da rede pública',
+    'Acesso ao Banheiro',
+    'Acesso à Quadra de esportes'
 ]
 
 

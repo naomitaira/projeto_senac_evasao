@@ -81,10 +81,10 @@ def calcular_total_abandono(df):
     # Agrupar por município
     total_abandono = (
         df.groupby('Municipio')['Total Abandono Escolar']
-        .mean()
-        .round(2)
-        .sort_values(ascending=False)
-    )
+    .mean()
+    .round(2)
+    .reset_index()
+)
 
     return total_abandono
 

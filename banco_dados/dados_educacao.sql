@@ -55,10 +55,24 @@ CREATE TABLE frequencia (
     FOREIGN KEY (id_disciplina) REFERENCES disciplinas(id_disciplina)
 ); 
 
-CREATE TABLE indicadores (
-    id_indicador INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE indicadores_completo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     ano INT,
+    unidade_geografica VARCHAR(50),
     regiao VARCHAR(50),
+    localizacao VARCHAR(50),
+    dependencia_administrativa VARCHAR(50),
+    grupo_de_abandono VARCHAR(50),
     taxa_abandono DECIMAL(5,2),
     renda_media DECIMAL(10,2)
+);
+
+CREATE TABLE censo_escolar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ano INT,
+    regiao VARCHAR(50),
+    uf VARCHAR(10),
+    municipio VARCHAR(100),
+    instituicao VARCHAR(255),
+    dependencia VARCHAR(50)
 );

@@ -16,7 +16,7 @@ df_censo_2023 = pd.read_csv(r'sp\2023\microdados_ed_basica_2023.csv', sep=';', e
 print("Carregando Censo 2024...")
 df_censo_2024 = pd.read_csv(r'sp\2024\microdados_ed_basica_2024.csv', sep=';', encoding='latin-1', on_bad_lines='skip', low_memory=False)
 
-# Colunas que realmente precisamos (ajuda o pandas a carregar mais rápido se filtrarmos depois)
+# Renomear as colunas que realmente precisamos 
 
 
 def renomear_colunas(df):
@@ -44,6 +44,8 @@ df_censo_2022 = renomear_colunas(df_censo_2022)
 df_censo_2023 = renomear_colunas(df_censo_2023)
 df_censo_2024 = renomear_colunas(df_censo_2024)
 
+# Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
+
 colunas_relevantes = [
     'Região',
     'UF',
@@ -58,105 +60,23 @@ colunas_relevantes = [
     'Acesso à Energia elétrica da rede pública',
     'Acesso à Esgoto da rede pública',
     'Acesso ao Banheiro',
-    'Acesso à Quadra de esportes'
-]
-
-colunas_percentuais = [
-    'Acesso à internet para alunos',
-    'Acesso ao Laboratório de informática',
-    'Acesso à Biblioteca',
-    'Acesso à Alimentação',
-    'Acesso ao Refeitório',
-    'Acesso à Água potável',
-    'Acesso à Energia elétrica da rede pública',
-    'Acesso à Esgoto da rede pública',
-    'Acesso ao Banheiro',
-    'Acesso à Quadra de esportes'
-]
+    'Acesso à Quadra de esportes']
 
 
-
-# Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
 def selecionar_colunas_existentes(df, colunas):
     colunas_existentes = [col for col in colunas if col in df.columns]
-    return df[colunas_existentes].replace('', pd.NA).dropna(how='any').copy() # .copy() evita avisos de SettingWithCopyWarning
-
+    return df[colunas_existentes].replace('', pd.NA).dropna(how='any').copy() 
 
 df_limpo1 = selecionar_colunas_existentes(df_censo_2022, colunas_relevantes)
 df_limpo2 = selecionar_colunas_existentes(df_censo_2023, colunas_relevantes)
 df_limpo3 = selecionar_colunas_existentes(df_censo_2024, colunas_relevantes)
 
 
-# ##################### CALCULAR PERCENTUAIS DE INFRAESTRUTURA POR MUNICÍPIO #####################
-
-
-colunas_percentuais = [
-    'Acesso à internet para alunos',
-    'Acesso ao Laboratório de informática',
-    'Acesso à Biblioteca',
-    'Acesso à Alimentação',
-    'Acesso ao Refeitório',
-    'Acesso à Água potável',
-    'Acesso à Energia elétrica da rede pública',
-    'Acesso à Esgoto da rede pública',
-    'Acesso ao Banheiro',
-    'Acesso à Quadra de esportes'
-]
-def calcular_percentuais_infraestrutura(df):
-
-    infraestrutura = (
-        df.groupby('Municipio')[colunas_percentuais]
-        .mean()
-        .mul(100)
-        .round(1)
-        .reset_index()
-    )
-
-    return infraestrutura
-
-infra_2022 = calcular_percentuais_infraestrutura(df_limpo1)
-infra_2023 = calcular_percentuais_infraestrutura(df_limpo2)
-infra_2024 = calcular_percentuais_infraestrutura(df_limpo3)
-
 # Criar pasta de saída se não existir
 
 os.makedirs(r'sp/dados_limpos', exist_ok=True)
 
-# Criar os arquivos de percentuais por município para cada ano
-
-# 2022
-                
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2022.csv',
-          'w',
-          newline='',
-          encoding='utf-8') as f:
-
-    f.write('Município,Percentual\n')
-
-    infra_2022.to_csv(f, header=False, index=False)
-    
-# 2023
-    
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2023.csv',
-          'w',
-          newline='',
-          encoding='utf-8') as f:
-    
-    f.write('Município,Percentual\n')
-    
-    infra_2023.to_csv(f, header=False, index=False)
-    
-# 2024
-    
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2024.csv',
-          'w',
-          newline='',
-          encoding='utf-8') as f:
-    
-    f.write('Município,Percentual\n')
-        
-    infra_2024.to_csv(f, header=False, index=False)
-
+# Trocar os valores booleanos de 1 e 0 para "Sim" e "Não" nas colunas de infraestrutura
 
 colunas_booleanas = [
     'Acesso à internet para alunos',
@@ -194,37 +114,3 @@ df_limpo3.to_csv(r'sp/dados_limpos/censo_escolar_2024_limpo.csv', index=False, e
 
 
 print('Arquivos foram limpos e salvos com sucesso!')
-
-# Ajustar os dados para agrupar por município 
-
-infra_2022 = (
-    df_limpo1
-    .groupby('Municipio')
-    [
-        [
-            'Acesso à internet para alunos',
-            'Quantidade de tablets para alunos',
-            'Acesso ao Laboratório de informática',
-            'Acesso à Biblioteca',
-            'Acesso à Alimentação',
-            'Acesso ao Refeitório',
-            'Acesso à Água potável',
-            'Acesso à Energia elétrica da rede pública',
-            'Acesso à Esgoto da rede pública',
-            'Acesso ao Banheiro',
-            'Acesso à Quadra de esportes'
-        ]
-    ]
-    .mean()
-    .reset_index()
-)
-
-# Salvar o resultado em um novo arquivo csv 
-
-infra_2022.to_csv(
-    r'sp/dados_limpos/infraestrutura_2022.csv',
-    sep=';',
-    decimal=',',
-    index=False,
-    encoding='utf-8'
-)

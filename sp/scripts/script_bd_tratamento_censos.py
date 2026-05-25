@@ -16,7 +16,7 @@ df_censo_2023 = pd.read_csv(r'sp\2023\microdados_ed_basica_2023.csv', sep=';', e
 print("Carregando Censo 2024...")
 df_censo_2024 = pd.read_csv(r'sp\2024\microdados_ed_basica_2024.csv', sep=';', encoding='latin-1', on_bad_lines='skip', low_memory=False)
 
-# Colunas que realmente precisamos (ajuda o pandas a carregar mais rápido se filtrarmos depois)
+# Renomear as colunas que realmente precisamos 
 
 
 def renomear_colunas(df):
@@ -44,6 +44,8 @@ df_censo_2022 = renomear_colunas(df_censo_2022)
 df_censo_2023 = renomear_colunas(df_censo_2023)
 df_censo_2024 = renomear_colunas(df_censo_2024)
 
+# Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
+
 colunas_relevantes = [
     'Região',
     'UF',
@@ -58,20 +60,35 @@ colunas_relevantes = [
     'Acesso à Energia elétrica da rede pública',
     'Acesso à Esgoto da rede pública',
     'Acesso ao Banheiro',
+<<<<<<< HEAD
     'Acesso à Quadra de esportes'
 ]
 
 
 # Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
+=======
+    'Acesso à Quadra de esportes']
+
+
+>>>>>>> c3630e9dcb2dde0641c9ccd328f4179204cd246d
 def selecionar_colunas_existentes(df, colunas):
     colunas_existentes = [col for col in colunas if col in df.columns]
-    return df[colunas_existentes].replace('', pd.NA).dropna(how='any').copy() # .copy() evita avisos de SettingWithCopyWarning
-
+    return df[colunas_existentes].replace('', pd.NA).dropna(how='any').copy() 
 
 df_limpo1 = selecionar_colunas_existentes(df_censo_2022, colunas_relevantes)
 df_limpo2 = selecionar_colunas_existentes(df_censo_2023, colunas_relevantes)
 df_limpo3 = selecionar_colunas_existentes(df_censo_2024, colunas_relevantes)
 
+<<<<<<< HEAD
+=======
+
+# Criar pasta de saída se não existir
+
+os.makedirs(r'sp/dados_limpos', exist_ok=True)
+
+# Trocar os valores booleanos de 1 e 0 para "Sim" e "Não" nas colunas de infraestrutura
+
+>>>>>>> c3630e9dcb2dde0641c9ccd328f4179204cd246d
 colunas_booleanas = [
     'Acesso à internet para alunos',
     'Acesso ao Laboratório de informática',
@@ -117,5 +134,9 @@ df_limpo1.to_excel(r'sp/dados_limpos/censo_escolar_2022_excel.xlsx', index=False
 df_limpo2.to_excel(r'sp/dados_limpos/censo_escolar_2023_excel.xlsx', index=False)
 df_limpo3.to_excel(r'sp/dados_limpos/censo_escolar_2024_excel.xlsx', index=False)
 
+<<<<<<< HEAD
 print('Arquivos foram limpos e salvos com sucesso!')
 
+=======
+print('Arquivos foram limpos e salvos com sucesso!')
+>>>>>>> c3630e9dcb2dde0641c9ccd328f4179204cd246d

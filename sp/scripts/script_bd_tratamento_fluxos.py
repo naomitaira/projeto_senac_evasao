@@ -105,13 +105,24 @@ df_fluxo_2022_municipio.to_csv(r'sp/dados_limpos/fluxo_escolar_municipio_2022_li
 df_fluxo_2023_municipio.to_csv(r'sp/dados_limpos/fluxo_escolar_municipio_2023_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
 df_fluxo_2024_municipio.to_csv(r'sp/dados_limpos/fluxo_escolar_municipio_2024_limpo.csv', sep=';', decimal=',', index=False, encoding='utf-8')
 
+# Salvar os resultados em um novo arquivo excel
+
+df_fluxo_2022_municipio.to_excel(r'sp/dados_limpos/fluxo_escolar_2022_excel.xlsx', index=False)
+df_fluxo_2023_municipio.to_excel(r'sp/dados_limpos/fluxo_escolar_2023_excel.xlsx', index=False)
+df_fluxo_2024_municipio.to_excel(r'sp/dados_limpos/fluxo_escolar_2024_excel.xlsx', index=False)
+
 # Salvar os percentuais de abandono por município em um novo arquivo csv
 
-abandono_2022.to_csv(r'sp/dados_limpos/abandono_escolar_2022.csv',sep=';',decimal=',',encoding='utf-8')
+abandono_2022.to_csv(r'sp/dados_limpos/total_abandono_escolar_2022.csv',sep=';',decimal=',',encoding='utf-8')
+abandono_2023.to_csv(r'sp/dados_limpos/total_abandono_escolar_2023.csv',sep=';',decimal=',',encoding='utf-8')
+abandono_2024.to_csv(r'sp/dados_limpos/total_abandono_escolar_2024.csv',sep=';',decimal=',',encoding='utf-8')
 
-abandono_2023.to_csv(r'sp/dados_limpos/abandono_escolar_2023.csv',sep=';',decimal=',',encoding='utf-8')
 
-abandono_2024.to_csv(r'sp/dados_limpos/abandono_escolar_2024.csv',sep=';',decimal=',',encoding='utf-8')
+# Salvar os percentuais de abandono por município em um novo arquivo excel
+
+abandono_2022.to_excel(r'sp/dados_limpos/total_abandono_escolar_2022_excel.xlsx', index=False)
+abandono_2023.to_excel(r'sp/dados_limpos/total_abandono_escolar_2023_excel.xlsx', index=False)
+abandono_2024.to_excel(r'sp/dados_limpos/total_abandono_escolar_2024_excel.xlsx', index=False)
 
 print(f'Arquivos foram limpos e salvos')
 

@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime
 import requests
 from sp.scripts.extracao_api_evasao import extrair_dados
@@ -13,8 +13,8 @@ from sp.scripts.extracao_api_evasao import analisar_dados
 with DAG(
     'dag_api_evasao',
     description='DAG para extracao e transformacao de dados de evasao escolar',
-    schedule='*/10 * * * *',
-    start_date=datetime(2026, 4, 7),
+    schedule='@daily',
+    start_date=datetime(2026, 1, 1),
     catchup=False,
     tags=['evasao', 'escolar', 'projeto_evasao']
 ) as dag:

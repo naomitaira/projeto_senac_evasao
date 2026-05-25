@@ -61,20 +61,6 @@ colunas_relevantes = [
     'Acesso à Quadra de esportes'
 ]
 
-colunas_percentuais = [
-    'Acesso à internet para alunos',
-    'Acesso ao Laboratório de informática',
-    'Acesso à Biblioteca',
-    'Acesso à Alimentação',
-    'Acesso ao Refeitório',
-    'Acesso à Água potável',
-    'Acesso à Energia elétrica da rede pública',
-    'Acesso à Esgoto da rede pública',
-    'Acesso ao Banheiro',
-    'Acesso à Quadra de esportes'
-]
-
-
 
 # Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
 def selecionar_colunas_existentes(df, colunas):
@@ -85,78 +71,6 @@ def selecionar_colunas_existentes(df, colunas):
 df_limpo1 = selecionar_colunas_existentes(df_censo_2022, colunas_relevantes)
 df_limpo2 = selecionar_colunas_existentes(df_censo_2023, colunas_relevantes)
 df_limpo3 = selecionar_colunas_existentes(df_censo_2024, colunas_relevantes)
-
-
-# ##################### CALCULAR PERCENTUAIS DE INFRAESTRUTURA POR MUNICÍPIO #####################
-
-
-colunas_percentuais = [
-    'Acesso à internet para alunos',
-    'Acesso ao Laboratório de informática',
-    'Acesso à Biblioteca',
-    'Acesso à Alimentação',
-    'Acesso ao Refeitório',
-    'Acesso à Água potável',
-    'Acesso à Energia elétrica da rede pública',
-    'Acesso à Esgoto da rede pública',
-    'Acesso ao Banheiro',
-    'Acesso à Quadra de esportes'
-]
-def calcular_percentuais_infraestrutura(df):
-
-    infraestrutura = (
-        df.groupby('Municipio')[colunas_percentuais]
-        .mean()
-        .mul(100)
-        .round(1)
-        .reset_index()
-    )
-
-    return infraestrutura
-
-infra_2022 = calcular_percentuais_infraestrutura(df_limpo1)
-infra_2023 = calcular_percentuais_infraestrutura(df_limpo2)
-infra_2024 = calcular_percentuais_infraestrutura(df_limpo3)
-
-# Criar pasta de saída se não existir
-
-os.makedirs(r'sp/dados_limpos', exist_ok=True)
-
-# Criar os arquivos de percentuais por município para cada ano
-
-# 2022
-                
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2022.csv',
-          'w',
-          newline='',
-          encoding='utf-8') as f:
-
-    f.write('Município,Percentual\n')
-
-    infra_2022.to_csv(f, header=False, index=False)
-    
-# 2023
-    
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2023.csv',
-          'w',
-          newline='',
-          encoding='utf-8') as f:
-    
-    f.write('Município,Percentual\n')
-    
-    infra_2023.to_csv(f, header=False, index=False)
-    
-# 2024
-    
-with open(r'sp/dados_limpos/percentuais_infraestrutura_por_municipio_2024.csv',
-          'w',
-          newline='',
-          encoding='utf-8') as f:
-    
-    f.write('Município,Percentual\n')
-        
-    infra_2024.to_csv(f, header=False, index=False)
-
 
 colunas_booleanas = [
     'Acesso à internet para alunos',
@@ -186,45 +100,22 @@ df_limpo2[colunas_booleanas] = df_limpo2[colunas_booleanas].replace(mapeamento_p
 df_limpo3[colunas_booleanas] = df_limpo3[colunas_booleanas].replace(mapeamento_para_sim_nao)
 
 
-# Salvar o resultado em um novo arquivo
+# Criar pasta de saída se não existir
+
+os.makedirs(r'sp/dados_limpos', exist_ok=True)
+
+# Salvar o resultado em um novo arquivo csv 
+
 print("Salvando os arquivos limpos...")
 df_limpo1.to_csv(r'sp/dados_limpos/censo_escolar_2022_limpo.csv', index=False, encoding='utf-8')
 df_limpo2.to_csv(r'sp/dados_limpos/censo_escolar_2023_limpo.csv', index=False, encoding='utf-8')
 df_limpo3.to_csv(r'sp/dados_limpos/censo_escolar_2024_limpo.csv', index=False, encoding='utf-8')
 
+# Salvar o resultado em um novo arquivo excel
+
+df_limpo1.to_excel(r'sp/dados_limpos/censo_escolar_2022_excel.xlsx', index=False)
+df_limpo2.to_excel(r'sp/dados_limpos/censo_escolar_2023_excel.xlsx', index=False)
+df_limpo3.to_excel(r'sp/dados_limpos/censo_escolar_2024_excel.xlsx', index=False)
 
 print('Arquivos foram limpos e salvos com sucesso!')
 
-# Ajustar os dados para agrupar por município 
-
-infra_2022 = (
-    df_limpo1
-    .groupby('Municipio')
-    [
-        [
-            'Acesso à internet para alunos',
-            'Quantidade de tablets para alunos',
-            'Acesso ao Laboratório de informática',
-            'Acesso à Biblioteca',
-            'Acesso à Alimentação',
-            'Acesso ao Refeitório',
-            'Acesso à Água potável',
-            'Acesso à Energia elétrica da rede pública',
-            'Acesso à Esgoto da rede pública',
-            'Acesso ao Banheiro',
-            'Acesso à Quadra de esportes'
-        ]
-    ]
-    .mean()
-    .reset_index()
-)
-
-# Salvar o resultado em um novo arquivo csv 
-
-infra_2022.to_csv(
-    r'sp/dados_limpos/infraestrutura_2022.csv',
-    sep=';',
-    decimal=',',
-    index=False,
-    encoding='utf-8'
-)

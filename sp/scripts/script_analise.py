@@ -1,76 +1,147 @@
 import pandas as pd
 
 
-##################### CARREGAR ARQUIVOS #####################
+##################### FUNÇÃO PARA PADRONIZAR MUNICÍPIOS #####################
+
+def padronizar_municipios(df):
+
+    df['Municipio'] = (
+        df['Municipio']
+        .astype(str)
+        .str.strip()
+        .str.upper()
+    )
+
+    return df
 
 
-# Evasão escolar por município
+##################### FUNÇÃO PARA PROCESSAR CADA ANO #####################
 
-abandono_2022 = pd.read_csv(
-    r'sp/dados_limpos/abandono_escolar_2022.csv',
-    sep=';',
-    encoding='utf-8'
-)
+def processar_ano(ano):
+
+    print(f'\nProcessando {ano}...')
 
 
-# Infraestrutura por município
+    ##################### EVASÃO #####################
 
-infra_2022 = pd.read_csv(
-    r'sp/dados_limpos/censo_escolar_2022_limpo.csv',
-    sep=',',
-    encoding='utf-8'
-)
+    abandono = pd.read_csv(
+        fr'sp/dados_limpos/total_abandono_escolar_{ano}.csv',
+        sep=';',
+        decimal=',',
+        encoding='utf-8'
+    )
 
-
-##################### PADRONIZAR MUNICÍPIOS #####################
-
-
-abandono_2022['Municipio'] = (
-    abandono_2022['Municipio']
-    .astype(str)
-    .str.strip()
-    .str.upper()
-)
-
-infra_2022['Municipio'] = (
-    infra_2022['Municipio']
-    .astype(str)
-    .str.strip()
-    .str.upper()
-)
+    abandono = padronizar_municipios(abandono)
 
 
-##################### JUNTAR AS TABELAS #####################
+    ##################### INFRAESTRUTURA #####################
+
+    infra = pd.read_csv(
+        fr'sp/dados_limpos/censo_escolar_{ano}_limpo.csv',
+        encoding='utf-8'
+    )
+
+    infra = padronizar_municipios(infra)
 
 
-relacao_2022 = pd.merge(
-    abandono_2022,
-    infra_2022,
-    on='Municipio',
-    how='inner'
-)
+    ##################### CONVERTER SIM/NÃO #####################
 
-##################### MOSTRAR RESULTADOS #####################
+    mapeamento = {
+        'Sim': 1,
+        'Não': 0
+    }
 
+    colunas_infra = [
+        'Acesso à internet para alunos',
+        'Acesso ao Laboratório de informática',
+        'Acesso à Biblioteca',
+        'Acesso à Alimentação',
+        'Acesso ao Refeitório',
+        'Acesso à Água potável',
+        'Acesso à Energia elétrica da rede pública',
+        'Acesso à Esgoto da rede pública',
+        'Acesso ao Banheiro',
+        'Acesso à Quadra de esportes'
+    ]
 
-print('\nQuantidade de linhas encontradas:')
-print(relacao_2022.shape)
+    for coluna in colunas_infra:
 
-
-print('\nPrimeiras linhas:')
-print(relacao_2022.head())
-
-
-##################### SALVAR CSV FINAL #####################
-
-
-relacao_2022.to_csv(
-    r'sp/dados_limpos/relacao_evasao_infraestrutura_2022.csv',
-    sep=',',
-    decimal=',',
-    index=False,
-    encoding='utf-8'
-)
+        infra[coluna] = infra[coluna].replace(mapeamento)
 
 
-print('\nArquivo salvo com sucesso!')
+    ##################### AGRUPAR POR MUNICÍPIO #####################
+
+    infra_agrupada = (
+        infra
+        .groupby('Municipio')[colunas_infra]
+        .mean()
+        .mul(100)
+        .round(1)
+        .reset_index()
+    )
+
+
+    ##################### JUNTAR TABELAS #####################
+
+    relacao = abandono.merge(
+        infra_agrupada,
+        on='Municipio',
+        how='inner'
+    )
+
+
+    ##################### MOSTRAR RESULTADOS #####################
+
+    print('\nQuantidade de linhas:')
+
+    print(relacao.shape)
+
+    print('\nPrimeiras linhas:')
+
+    print(relacao.head())
+
+
+    ##################### CORRELAÇÃO #####################
+
+    print('\nCorrelação entre evasão e internet:')
+
+    print(
+        relacao[
+            [
+                'Total Abandono Escolar',
+                'Acesso à internet para alunos'
+            ]
+        ].corr()
+    )
+
+
+    ##################### MAIOR EVASÃO #####################
+
+    print('\nTop 10 municípios com maior evasão:')
+
+    print(
+        relacao.sort_values(
+            by='Total Abandono Escolar',
+            ascending=False
+        ).head(10)
+    )
+
+
+    ##################### SALVAR #####################
+
+    relacao.to_csv(
+        fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.csv',
+        sep=';',
+        decimal=',',
+        index=False,
+        encoding='utf-8'
+    )
+
+    print(f'\nArquivo {ano} salvo com sucesso!')
+
+
+##################### EXECUTAR #####################
+
+processar_ano(2022)
+processar_ano(2023)
+processar_ano(2024)

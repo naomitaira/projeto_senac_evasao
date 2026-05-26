@@ -55,7 +55,7 @@ CREATE TABLE frequencia (
     FOREIGN KEY (id_disciplina) REFERENCES disciplinas(id_disciplina)
 ); 
 
-CREATE TABLE indicadores_completo (
+CREATE TABLE indicadores_completos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     ano INT,
     unidade_geografica VARCHAR(50),

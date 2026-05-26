@@ -36,7 +36,7 @@ def carregar_indicadores():
     )
 
     sql = """
-    INSERT INTO indicadores
+    INSERT INTO indicadores_completos
     (ano, regiao, taxa_abandono, renda_media)
     VALUES (%s, %s, %s, %s)
     """
@@ -130,7 +130,7 @@ def carregar_indicadores_completo():
     )
 
     sql = """
-    INSERT INTO indicadores_completo (
+    INSERT INTO indicadores_completos (
         ano,
         unidade_geografica,
         regiao,

@@ -19,7 +19,7 @@ df = df.fillna(0)
 print(df.columns)
 # inserir dados
 sql = """
-INSERT INTO indicadores (ano, regiao, taxa_abandono, renda_media)
+INSERT INTO indicadores_completos (ano, regiao, taxa_abandono, renda_media)
 VALUES (%s, %s, %s, %s)
 """
 dados = []

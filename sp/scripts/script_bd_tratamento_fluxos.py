@@ -2,6 +2,8 @@ import pandas as pd
 import os
 
 
+################## DEVE SER RODADO DEPOIS DOS CENSOS ##################
+
 ##################### TRATAR FLUXOS ESCOLARES #####################
 
 

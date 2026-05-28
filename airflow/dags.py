@@ -4,7 +4,7 @@ from datetime import datetime
 from censo_escolar2024_2025 import carga_censo_escolar_mysql
 from inep_indic_mysql import carga_inep_indicadores_mysql
 from utils.carga_censo import carga_censo_escolar_mysql
-
+from utils.carga_indicadores import carga_indicadores_mysql
 
 with DAG(
     dag_id="pipeline_educacao",
@@ -39,6 +39,5 @@ with DAG(
             "caminho_csv": "/opt/airflow/dags/banco_dados/dados/inep_indicadores_educacionais_brasil.csv"
         }
     )
-
-    # ✅ Agora funciona
+    
     tarefa_censo >> tarefa_indicadores >> tarefa_inep

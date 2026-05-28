@@ -1,48 +1,82 @@
 import pandas as pd
 import mysql.connector
 
-# conexão com o banco
-conn = mysql.connector.connect(
-    host="localhost",
-    port=3307,
-    user="root",       # coloque seu usuário
-    password="senac",   # coloque sua senha
-    database="dados_educacao"
-)
-cursor = conn.cursor()
-# ler o CSV
-df = pd.read_csv("banco_dados/dados/abandonoEscolar_RendaMedia_2013_2023.csv")
-df.columns= df.columns.str.strip().str.lower()
-df= df.fillna(0)
-# tratar dados (evita erro)
-df = df.fillna(0)
-print(df.columns)
-# inserir dados
-sql = """
-INSERT INTO indicadores_completo (
-    ano, unidade_geografica, regiao, localizacao,
-    dependencia_administrativa, grupo_de_abandono,
-    taxa_abandono, renda_media
-)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-"""
+def carga_indicadores_mysql(
+    caminho_csv: str,
+    host: str = "localhost",
+    port: int = 3307,
+    user: str = "root",
+    password: str = "senac",
+    database: str = "dados_educacao"
+):
+    """
+    Função para carregar dados de abandono escolar + renda média para MySQL.
 
-dados = []
-renda_media= 0
-for _, row in df.iterrows():
-    dados.append((
-        int(row["ano"]),
-        row["unidade_geografica"],
-        row["regiao"],
-        row["localizacao"],
-        row["dependencia_administrativa"],
-        row["grupo_de_abandono"],
-        float(row["taxa_abandono"]),
-        float(row["renda_media"])
-    ))
+    Parâmetros:
+        caminho_csv (str): caminho do arquivo CSV
+        host (str): host do banco
+        port (int): porta do banco
+        user (str): usuário
+        password (str): senha
+        database (str): nome do banco
+    """
 
-cursor.executemany(sql, dados)
-conn.commit()
-cursor.close()
-conn.close()
-print("✅ Dados inseridos com sucesso!")
+    try:
+        print("🔌 Conectando ao banco de dados...")
+        conn = mysql.connector.connect(
+            host=host,
+            port=port,
+            user=user,
+            password=password,
+            database=database
+        )
+        cursor = conn.cursor()
+
+        print("📄 Lendo CSV...")
+        df = pd.read_csv(caminho_csv)
+
+        print("🧹 Tratando dados...")
+        df.columns = df.columns.str.strip().str.lower()
+        df = df.fillna(0)
+
+        sql = """
+        INSERT INTO indicadores_completo (
+            ano, unidade_geografica, regiao, localizacao,
+            dependencia_administrativa, grupo_de_abandono,
+            taxa_abandono, renda_media
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        """
+
+        print("📦 Preparando dados para inserção...")
+        dados = [
+            (
+                int(row["ano"]),
+                row["unidade_geografica"],
+                row["regiao"],
+                row["localizacao"],
+                row["dependencia_administrativa"],
+                row["grupo_de_abandono"],
+                float(row["taxa_abandono"]),
+                float(row["renda_media"])
+            )
+            for _, row in df.iterrows()
+        ]
+
+        print(f"🚀 Inserindo {len(dados)} registros...")
+        cursor.executemany(sql, dados)
+        conn.commit()
+
+        print("✅ Dados inseridos com sucesso!")
+
+    except Exception as e:
+        print(f"❌ Erro na carga: {e}")
+        raise
+
+    finally:
+        try:
+            cursor.close()
+            conn.close()
+            print("🔒 Conexão encerrada.")
+        except:
+            pass

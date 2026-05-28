@@ -1,0 +1,56 @@
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from datetime import datetime
+from censo_escolar2024_2025 import carga_censo_escolar_mysql
+from inep_indic_mysql import carga_inep_indicadores_mysql
+from meu_script import carga_indicadores_mysql
+
+with DAG(
+    dag_id="carga_indicadores_mysql",
+    start_date=datetime(2024, 1, 1),
+    schedule_interval="@daily",
+    catchup=False
+) as dag:
+
+    tarefa_carga = PythonOperator(
+        task_id="inserir_dados_mysql",
+        python_callable=carga_indicadores_mysql,
+        op_kwargs={
+            "caminho_csv": "/opt/airflow/dags/banco_dados/dados/abandonoEscolar_RendaMedia_2013_2023.csv"
+        }
+    )
+    
+with DAG(
+    dag_id="carga_censo_escolar",
+    start_date=datetime(2024, 1, 1),
+    schedule_interval="@daily",
+    catchup=False
+) as dag:
+
+    tarefa_censo = PythonOperator(
+        task_id="carga_censo_mysql",
+        python_callable=carga_censo_escolar_mysql,
+        op_kwargs={
+            "arquivos": [
+                "/opt/airflow/dags/banco_dados/dados/censo_escolar_2024_senac.csv",
+                "/opt/airflow/dags/banco_dados/dados/censo_escolar_2025_senac.csv"
+            ]
+        }
+    )
+    
+with DAG(
+    dag_id="carga_inep_indicadores",
+    start_date=datetime(2024, 1, 1),
+    schedule_interval="@daily",
+    catchup=False
+) as dag:
+
+    tarefa_inep = PythonOperator(
+        task_id="carga_inep_mysql",
+        python_callable=carga_inep_indicadores_mysql,
+        op_kwargs={
+            "caminho_csv": "/opt/airflow/dags/banco_dados/dados/inep_indicadores_educacionais_brasil.csv"
+        }
+    )
+   
+    tarefa_censo >> tarefa_carga >> tarefa_inep

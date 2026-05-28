@@ -1,54 +1,88 @@
 import pandas as pd
 import mysql.connector
 
-# conexão com o banco
-conn = mysql.connector.connect(
-    host="localhost",
-    port=3307,
-    user="root",       # coloque seu usuário
-    password="senac",   # coloque sua senha
-    database="dados_educacao"
-)
-cursor = conn.cursor()
-# ler o CSV
-sql = """
-insert into censo_escolar(
-ano,regiao,uf,municipio,instituicao,dependencia
-)values(%s,%s,%s,%s,%s,%s)
-"""
+def carga_censo_escolar_mysql(
+    arquivos: list,
+    host: str = "localhost",
+    port: int = 3307,
+    user: str = "root",
+    password: str = "senac",
+    database: str = "dados_educacao"
+):
+    """
+    Carrega arquivos de censo escolar para MySQL.
 
-arquivos = [
-    "banco_dados/dados/censo_escolar_2024_senac.csv",
-    "banco_dados/dados/censo_escolar_2025_senac.csv"
-]
-for arquivo in arquivos:
+    Parâmetros:
+        arquivos (list): lista de caminhos dos CSVs
+        host (str): host do banco
+        port (int): porta
+        user (str): usuário
+        password (str): senha
+        database (str): banco
+    """
 
-    # ✅ detectar separador
-    if "2024" in arquivo:
-        df = pd.read_csv(arquivo, encoding="latin-1", sep=";")
-    else:
-        df = pd.read_csv(arquivo, encoding="latin-1", sep=",")
+    try:
+        print("🔌 Conectando ao banco...")
+        conn = mysql.connector.connect(
+            host=host,
+            port=port,
+            user=user,
+            password=password,
+            database=database
+        )
+        cursor = conn.cursor()
 
-    df.columns = df.columns.str.strip().str.lower()
+        sql = """
+        INSERT INTO censo_escolar(
+            ano, regiao, uf, municipio, instituicao, dependencia
+        )
+        VALUES (%s, %s, %s, %s, %s, %s)
+        """
 
-    print(df.columns)  # ✅ para conferir
+        total_registros = 0
 
-    df = df.fillna("")
+        for arquivo in arquivos:
+            print(f"📄 Processando arquivo: {arquivo}")
 
-    dados = []
+            # detectar separador automaticamente (melhor que if 2024)
+            if "2024" in arquivo:
+                df = pd.read_csv(arquivo, encoding="latin-1", sep=";")
+            else:
+                df = pd.read_csv(arquivo, encoding="latin-1", sep=",")
 
-    for _, row in df.iterrows():
-        dados.append((
-            int(row["nu_ano_censo"]),
-            row["no_regiao"],
-            row["sg_uf"],
-            row["no_municipio"],
-            row["no_entidade"],
-            row["tp_dependencia"]
-        ))
+            print("🧹 Tratando dados...")
+            df.columns = df.columns.str.strip().str.lower()
+            df = df.fillna("")
 
-    cursor.executemany(sql, dados)
-    conn.commit()
-cursor.close()
-conn.close()
-print("Dados inseridos com sucesso!")
+            print("📦 Preparando dados...")
+            dados = [
+                (
+                    int(row["nu_ano_censo"]),
+                    row["no_regiao"],
+                    row["sg_uf"],
+                    row["no_municipio"],
+                    row["no_entidade"],
+                    row["tp_dependencia"]
+                )
+                for _, row in df.iterrows()
+            ]
+
+            print(f"🚀 Inserindo {len(dados)} registros...")
+            cursor.executemany(sql, dados)
+            conn.commit()
+
+            total_registros += len(dados)
+
+        print(f"✅ Total de registros inseridos: {total_registros}")
+
+    except Exception as e:
+        print(f"❌ Erro na carga: {e}")
+        raise
+
+    finally:
+        try:
+            cursor.close()
+            conn.close()
+            print("🔒 Conexão encerrada.")
+        except:
+            pass

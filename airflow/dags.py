@@ -1,8 +1,8 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
-from censo_escolar2024_2025 import carga_censo_escolar_mysql
-from inep_indic_mysql import carga_inep_indicadores_mysql
+from sp.scripts.extracao_api_evasao.censo_escolar2024_2025 import carga_censo_escolar_mysql
+from sp.scripts.extracao_api_evasao.inep_indic_mysql import carga_inep_indicadores_mysql
 from utils.carga_censo import carga_censo_escolar_mysql
 
 

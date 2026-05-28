@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import csv
 
+################## DEVE SER RODADO PRIMEIRO ##################
 
 ##################### TRATAR CENSOS ESCOLARES #####################
 
@@ -35,8 +36,7 @@ def renomear_colunas(df):
         'IN_ENERGIA_REDE_PUBLICA': 'Acesso à Energia elétrica da rede pública',
         'IN_ESGOTO_REDE_PUBLICA': 'Acesso à Esgoto da rede pública',
         'IN_BANHEIRO': 'Acesso ao Banheiro',
-        'IN_QUADRA_ESPORTES': 'Acesso à Quadra de esportes'
-    }
+        'IN_QUADRA_ESPORTES': 'Acesso à Quadra de esportes'}
 
     return df.rename(columns=renomear_colunas)
 
@@ -60,17 +60,11 @@ colunas_relevantes = [
     'Acesso à Energia elétrica da rede pública',
     'Acesso à Esgoto da rede pública',
     'Acesso ao Banheiro',
-<<<<<<< HEAD
-    'Acesso à Quadra de esportes'
-]
-
-
-# Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
-=======
     'Acesso à Quadra de esportes']
 
 
->>>>>>> c3630e9dcb2dde0641c9ccd328f4179204cd246d
+# Selecionar as colunas relevantes e remover linhas com qualquer valor vazio
+
 def selecionar_colunas_existentes(df, colunas):
     colunas_existentes = [col for col in colunas if col in df.columns]
     return df[colunas_existentes].replace('', pd.NA).dropna(how='any').copy() 
@@ -79,16 +73,6 @@ df_limpo1 = selecionar_colunas_existentes(df_censo_2022, colunas_relevantes)
 df_limpo2 = selecionar_colunas_existentes(df_censo_2023, colunas_relevantes)
 df_limpo3 = selecionar_colunas_existentes(df_censo_2024, colunas_relevantes)
 
-<<<<<<< HEAD
-=======
-
-# Criar pasta de saída se não existir
-
-os.makedirs(r'sp/dados_limpos', exist_ok=True)
-
-# Trocar os valores booleanos de 1 e 0 para "Sim" e "Não" nas colunas de infraestrutura
-
->>>>>>> c3630e9dcb2dde0641c9ccd328f4179204cd246d
 colunas_booleanas = [
     'Acesso à internet para alunos',
     'Acesso ao Laboratório de informática',
@@ -134,9 +118,5 @@ df_limpo1.to_excel(r'sp/dados_limpos/censo_escolar_2022_excel.xlsx', index=False
 df_limpo2.to_excel(r'sp/dados_limpos/censo_escolar_2023_excel.xlsx', index=False)
 df_limpo3.to_excel(r'sp/dados_limpos/censo_escolar_2024_excel.xlsx', index=False)
 
-<<<<<<< HEAD
 print('Arquivos foram limpos e salvos com sucesso!')
 
-=======
-print('Arquivos foram limpos e salvos com sucesso!')
->>>>>>> c3630e9dcb2dde0641c9ccd328f4179204cd246d

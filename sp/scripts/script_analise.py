@@ -1,4 +1,6 @@
+
 import pandas as pd
+import os
 
 
 ##################### FUNÇÃO PARA PADRONIZAR MUNICÍPIOS #####################
@@ -65,7 +67,6 @@ def processar_ano(ano):
     ]
 
     for coluna in colunas_infra:
-
         infra[coluna] = infra[coluna].replace(mapeamento)
 
 
@@ -89,103 +90,91 @@ def processar_ano(ano):
         how='inner'
     )
 
+    relacao['Total Abandono Escolar'] = pd.to_numeric(
+        relacao['Total Abandono Escolar'], errors='coerce'
+    )
+
 
     ##################### MOSTRAR RESULTADOS #####################
 
     print('\nQuantidade de linhas:')
-
     print(relacao.shape)
-
-    print('\nPrimeiras linhas:')
-
-    print(relacao.head())
 
 
     ##################### CORRELAÇÃO #####################
 
-    print('\nCorrelação entre evasão e internet:')
+    print('\n========== CORRELAÇÕES COM EVASÃO ESCOLAR ==========')
 
-    print(
-        relacao[
-            [
-                'Total Abandono Escolar',
-                'Acesso à internet para alunos'
-            ]
-        ].corr()
-    )
-    print('\nCorrelação entre evasão e internet:')
+    correlacoes = {
+        'Internet':         'Acesso à internet para alunos',
+        'Alimentação':      'Acesso à Alimentação',
+        'Água potável':     'Acesso à Água potável',
+        'Energia elétrica': 'Acesso à Energia elétrica da rede pública',
+        'Esgoto':           'Acesso à Esgoto da rede pública',
+        'Lab. informática': 'Acesso ao Laboratório de informática',
+        'Biblioteca':       'Acesso à Biblioteca',
+        'Refeitório':       'Acesso ao Refeitório',
+        'Banheiro':         'Acesso ao Banheiro',
+        'Quadra esportes':  'Acesso à Quadra de esportes',
+    }
 
-    print('\nCorrelação entre evasão e alimentação:')
-    
-    print(
-        relacao[
-            [
-                'Total Abandono Escolar',
-                'Acesso à Alimentação'
-            ]
-        ].corr()
-    )
-    print('\nCorrelação entre evasão e acesso à água potável:')
-    
-    print(
-        relacao[
-            [
-                'Total Abandono Escolar',
-                'Acesso à Água potável'
-            ]
-        ].corr()
-    )
-    print('\nCorrelação entre evasão e acesso à energia elétrica:')
-    
-    
-    print(
-        relacao[
-            [
-                'Total Abandono Escolar',
-                'Acesso à Energia elétrica da rede pública'
-            ]
-        ].corr()
-    )
-    print('\nCorrelação entre evasão e acesso ao esgoto:')
-    
-    print(
-        relacao[
-            [
-                'Total Abandono Escolar',
-                'Acesso à Esgoto da rede pública'
-            ]
-        ].corr()
+    for nome, coluna in correlacoes.items():
+        corr = relacao['Total Abandono Escolar'].corr(relacao[coluna])
+        print(f'{nome:<20} → {corr:.4f}')
+
+
+    ##################### TOP 10 MAIOR EVASÃO #####################
+
+    print('\n========== TOP 10 MUNICÍPIOS COM MAIOR EVASÃO ==========')
+
+    top_evasao = (
+        relacao
+        .sort_values(by='Total Abandono Escolar', ascending=False)
+        .head(30)[['Municipio', 'Total Abandono Escolar'] + colunas_infra]
+        .reset_index(drop=True)
     )
 
-    ##################### MAIOR EVASÃO #####################
+    top_evasao.index += 1  # começa do 1 em vez do 0
 
-    print('\nTop 5 municípios com maior evasão:')
+    print(top_evasao.to_string())
 
-    print(
-        relacao.sort_values(
-            by='Total Abandono Escolar',
-            ascending=False
-        ).head(5)
+
+##################### SALVAR #####################
+
+    caminho = fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.xlsx'
+    caminho_top_evasao = fr'sp/dados_limpos/top_evasao_{ano}.xlsx'
+
+    if os.path.exists(caminho):
+        os.remove(caminho)
+
+    if os.path.exists(caminho_top_evasao):
+        os.remove(caminho_top_evasao)
+
+    # arquivo completo
+    relacao.to_excel(caminho, index=False)
+
+    # top 20 com correlações numa segunda aba
+    top_evasao = (
+        relacao
+        .sort_values(by='Total Abandono Escolar', ascending=False)
+        .head(30)[['Municipio', 'Total Abandono Escolar'] + colunas_infra]
+        .reset_index(drop=True)
     )
+    top_evasao.index += 1
 
+    correlacoes_df = pd.DataFrame({
+        'Infraestrutura': list(correlacoes.keys()),
+        'Correlação com Evasão': [
+            relacao['Total Abandono Escolar'].corr(relacao[col])
+            for col in correlacoes.values()
+        ]
+    }).round(4)
 
-    ##################### SALVAR #####################
+    with pd.ExcelWriter(caminho_top_evasao, engine='openpyxl') as writer:
+        top_evasao.to_excel(writer, sheet_name='Top 20 Evasão', index=True)
+        correlacoes_df.to_excel(writer, sheet_name='Correlações', index=False)
 
-    # relacao.to_csv(
-    #     fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.csv',
-    #     sep=';',
-    #     decimal=',',
-    #     index=False,
-    #     encoding='utf-8'
-    # )
-    
-    relacao.to_excel(
-        fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.xlsx',
-        index=False
-    )
-
-    print(f'\nArquivo {ano} salvo com sucesso!')
-
+    print(f'\nArquivos {ano} salvos com sucesso!')
 
 ##################### EXECUTAR #####################
 

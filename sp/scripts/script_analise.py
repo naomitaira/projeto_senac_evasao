@@ -113,28 +113,75 @@ def processar_ano(ano):
             ]
         ].corr()
     )
+    print('\nCorrelação entre evasão e internet:')
 
+    print('\nCorrelação entre evasão e alimentação:')
+    
+    print(
+        relacao[
+            [
+                'Total Abandono Escolar',
+                'Acesso à Alimentação'
+            ]
+        ].corr()
+    )
+    print('\nCorrelação entre evasão e acesso à água potável:')
+    
+    print(
+        relacao[
+            [
+                'Total Abandono Escolar',
+                'Acesso à Água potável'
+            ]
+        ].corr()
+    )
+    print('\nCorrelação entre evasão e acesso à energia elétrica:')
+    
+    
+    print(
+        relacao[
+            [
+                'Total Abandono Escolar',
+                'Acesso à Energia elétrica da rede pública'
+            ]
+        ].corr()
+    )
+    print('\nCorrelação entre evasão e acesso ao esgoto:')
+    
+    print(
+        relacao[
+            [
+                'Total Abandono Escolar',
+                'Acesso à Esgoto da rede pública'
+            ]
+        ].corr()
+    )
 
     ##################### MAIOR EVASÃO #####################
 
-    print('\nTop 10 municípios com maior evasão:')
+    print('\nTop 5 municípios com maior evasão:')
 
     print(
         relacao.sort_values(
             by='Total Abandono Escolar',
             ascending=False
-        ).head(10)
+        ).head(5)
     )
 
 
     ##################### SALVAR #####################
 
-    relacao.to_csv(
-        fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.csv',
-        sep=';',
-        decimal=',',
-        index=False,
-        encoding='utf-8'
+    # relacao.to_csv(
+    #     fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.csv',
+    #     sep=';',
+    #     decimal=',',
+    #     index=False,
+    #     encoding='utf-8'
+    # )
+    
+    relacao.to_excel(
+        fr'sp/dados_limpos/relacao_evasao_infraestrutura_{ano}.xlsx',
+        index=False
     )
 
     print(f'\nArquivo {ano} salvo com sucesso!')

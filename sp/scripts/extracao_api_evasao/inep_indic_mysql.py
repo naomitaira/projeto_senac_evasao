@@ -6,7 +6,7 @@ def carga_inep_indicadores_mysql(
     host: str = "localhost",
     port: int = 3307,
     user: str = "root",
-    password: str = "senac123",
+    password: str = "senac",
     database: str = "dados_educacao"
 ):
     """

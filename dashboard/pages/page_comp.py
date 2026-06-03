@@ -193,25 +193,29 @@ if df_all.empty:
 # MÉTRICAS
 # ==========================
 
+df_metrics = df_all[df_all["Year"] == ano_metricas]
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric(
         "Municípios",
-        df_all["Municipio"].nunique()
+        df_metrics["Municipio"].nunique()
     )
 
 with col2:
     st.metric(
         "Taxa Média",
-        f"{df_all['Taxa'].mean():.2f}%"
+        f"{df_metrics['Taxa'].mean():.2f}%"
     )
 
 with col3:
     st.metric(
         "Maior Taxa",
-        f"{df_all['Taxa'].max():.2f}%"
+        f"{df_metrics['Taxa'].max():.2f}%"
     )
+
+st.caption(f"Métricas calculadas para o ano {ano_metricas}.")
 
 
 # ==========================
@@ -221,6 +225,11 @@ with col3:
 with st.sidebar:
 
     st.header("Filtros")
+
+    ano_metricas = st.selectbox(
+        "Ano das métricas",
+        sorted(df_all["Year"].unique(), reverse=True)
+    )
 
     municipios = sorted(
         df_all["Municipio"].unique()
@@ -240,6 +249,40 @@ with st.sidebar:
         municipios,
         default=default_sel
     )
+
+    st.markdown("---")
+
+    st.write("Upload opcional de motivos de evasão")
+    motivos_upload = st.file_uploader(
+        "CSV com colunas Municipio e Motivo",
+        type=["csv"]
+    )
+
+    motivos_path = Path(__file__).resolve().parents[2] / "dados_tratados" / "motivos_evasao.csv"
+    if motivos_upload is not None:
+        try:
+            motivos_df = pd.read_csv(
+                motivos_upload,
+                encoding='utf-8',
+                engine='python'
+            )
+            st.success("Arquivo de motivos carregado com sucesso.")
+        except Exception as e:
+            st.warning(f"Não foi possível ler o arquivo de motivos: {e}")
+            motivos_df = None
+    elif motivos_path.exists():
+        try:
+            motivos_df = pd.read_csv(
+                motivos_path,
+                encoding='utf-8',
+                engine='python'
+            )
+            st.info("Arquivo de motivos encontrado localmente e carregado.")
+        except Exception as e:
+            st.warning(f"Erro ao ler motivos locais: {e}")
+            motivos_df = None
+    else:
+        motivos_df = None
 
     st.markdown("---")
 
@@ -459,6 +502,8 @@ map_year = st.selectbox(
     sorted(df_all["Year"].unique(), reverse=True)
 )
 
+st.subheader(f"Mapa do Brasil - Top municípios por evasão ({map_year})")
+
 map_top_n = st.slider("Top municípios no mapa", 5, 50, 20)
 
 df_map = (
@@ -512,10 +557,17 @@ else:
 
 if motivos_df is not None:
     motivos_df.columns = [c.strip() for c in motivos_df.columns]
-    if 'Municipio' in motivos_df.columns and 'Motivo' in motivos_df.columns:
-        motivos_df['municipio_norm'] = motivos_df['Municipio'].apply(_normalize)
+
+    motivos_map = motivos_df.copy()
+    if 'Ano' in motivos_map.columns:
+        motivos_map = motivos_map[motivos_map['Ano'] == map_year]
+    if 'Year' in motivos_map.columns:
+        motivos_map = motivos_map[motivos_map['Year'] == map_year]
+
+    if 'Municipio' in motivos_map.columns and 'Motivo' in motivos_map.columns:
+        motivos_map['municipio_norm'] = motivos_map['Municipio'].apply(_normalize)
         df_map = df_map.merge(
-            motivos_df[['municipio_norm', 'Motivo']],
+            motivos_map[['municipio_norm', 'Motivo']],
             left_on='_mun_norm',
             right_on='municipio_norm',
             how='left'

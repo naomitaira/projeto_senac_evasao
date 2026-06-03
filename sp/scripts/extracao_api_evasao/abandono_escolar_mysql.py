@@ -6,7 +6,7 @@ def carga_indicadores_mysql(
     host: str = "localhost",
     port: int = 3307,
     user: str = "root",
-    password: str = "senac123",
+    password: str = "senac",
     database: str = "dados_educacao"
 ):
     """
@@ -40,7 +40,7 @@ def carga_indicadores_mysql(
         df = df.fillna(0)
 
         sql = """
-        INSERT INTO indicadores_completo (
+        INSERT INTO indicadores_completos (
             ano, unidade_geografica, regiao, localizacao,
             dependencia_administrativa, grupo_de_abandono,
             taxa_abandono, renda_media

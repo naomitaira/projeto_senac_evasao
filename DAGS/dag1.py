@@ -10,6 +10,17 @@ from transformar_dados import transformar_dados
 from inep_indic_mysql import carga_inep_indicadores_mysql
 from censo_escolar2024_2025 import carga_censo_escolar_mysql
 from abandono_escolar_mysql import carga_indicadores_mysql
+import mysql.connector
+
+def conectar():
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="root",           # seu usuário
+        password="senac", # sua senha
+        database="dados_educacao"
+    )
+    return conn
+
 
 from datetime import datetime
 

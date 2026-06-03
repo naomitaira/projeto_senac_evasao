@@ -28,10 +28,10 @@ st.set_page_config(
 
 # define paginas do menu
 paginas_sp = st.Page(
-    "page_sp.py", title="Evasão escolar de São Paulo", icon="🍎") 
+    "page_sp.py", title="Evasão escolar de São Paulo", icon="📌") 
 
 paginas_comparativo= st.Page(
-    "page_comp.py", title="Comparativo de evasão escolar", icon="🍉")
+    "page_comp.py", title="Comparativo de evasão escolar", icon="🇧🇷")
 
 
 # cria menu lateral para navegacao entre paginas

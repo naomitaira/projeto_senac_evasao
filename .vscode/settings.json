@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^\\$script = @'\nimport requests\nfrom pathlib import Path\nurl='https://servicodados\\.ibge\\.gov\\.br/api/v1/localidades/municipios'\nr=requests\\.get\\(url, timeout=60\\)\ndata=r\\.json\\(\\)\nout=\\[\\{'id':item\\['id'\\],'nome':item\\['nome'\\]\\.upper\\(\\)\\} for item in data\\]\nlines=\\['id,nome'\\]\nfor o in out:\n    lines\\.append\\(f\"\\{o\\['id'\\]\\},\\\\\"\\{o\\['nome'\\]\\}\\\\\"\"\\)\nPath\\('sp/dashboard/ibge_municipios\\.csv'\\)\\.write_text\\('\\\\n'\\.join\\(lines\\), encoding='utf-8'\\)\nprint\\('saved', len\\(out\\)\\)\n'@\nSet-Content -Path tmp_ibge\\.py -Value \\$script -Encoding utf8\npython tmp_ibge\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

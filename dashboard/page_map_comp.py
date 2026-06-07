@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import json
-import re
-import numpy as np
 from pathlib import Path
+from utils_dados import carregar_dados
 
 CURRENT_DIR = Path(__file__).resolve().parent
 SP_DASHBOARD_DIR = Path(__file__).resolve().parents[2] / "sp" / "dashboard"

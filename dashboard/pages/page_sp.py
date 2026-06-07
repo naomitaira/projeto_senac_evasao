@@ -109,7 +109,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
  
-st.title("Evasão Escolar — São Paulo")
+st.title("Evasão Escolar — São Paulo ✵")
 st.divider()
  
 if df_all.empty:
@@ -118,7 +118,7 @@ if df_all.empty:
  
 # ─── FILTROS ───
  
-st.markdown(":blue[Selecione o ano, número de municípios e infraestrutura para análise:]")
+st.text("Selecione o ano, número de municípios e infraestrutura para análise:")
 
 col_f1, col_f2, col_f3 = st.columns(3)
 ano_sel   = col_f1.selectbox("Ano", sorted(df_all['Ano'].unique(), reverse=True))

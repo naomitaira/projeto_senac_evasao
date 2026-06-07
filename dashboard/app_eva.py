@@ -22,22 +22,24 @@ st.markdown("""
 # configura a pagina do streamlit
 st.set_page_config(
     page_title="Projeto Evasão Escolar",
-    page_icon="📚",
+    page_icon="✎",
     layout="wide"
 )
 
 # define paginas do menu
 paginas_sp = st.Page(
-    "page_sp.py", title="Evasão escolar de São Paulo", icon="🍎") 
+    "page_sp.py", title="Evasão escolar de São Paulo", icon="🎒") 
 
 paginas_comparativo= st.Page(
-    "page_comp.py", title="Comparativo de evasão escolar", icon="🍉")
+    "page_comp.py", title="Comparativo de evasão escolar", icon="📚")
 
+paginas_comparativo_atualizado= st.Page(
+    "page_map_comp.py", title="Comparativo de evasão escolar atualizado", icon="🗺️")
 
 # cria menu lateral para navegacao entre paginas
 
 menu = st.navigation(
-    [paginas_sp, paginas_comparativo])
+    [paginas_sp, paginas_comparativo, paginas_comparativo_atualizado])
 
 
 menu.run()

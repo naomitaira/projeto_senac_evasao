@@ -10,32 +10,36 @@ if df_all.empty:
 # configura a pagina do streamlit
 st.set_page_config(
     page_title="Projeto Evasão Escolar",
-    page_icon="✎",
+    page_icon="🏫",
     layout="wide"
 )
 
+# personaliza cor da barra lateral
 st.markdown(
     """
     <style>
         [data-testid="stSidebar"] {
-            background-color: #E6E6FA;
+            background-color: #AFC4D5;
         }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
+# personaliza cor do fundo da pagina
 st.markdown("""
 <style>
 .stApp {
-    background-color: #8FDC9F;
+    background-color: #F4F6F8;
 }
 </style>
 """, unsafe_allow_html=True)
 
+# personaliza cor das tags
 st.markdown("""
 <style>
 span[data-baseweb="tag"] {
-  background-color: lavender !important;
+  background-color: #D7C8E8 !important;
 }
 </style>
 """, unsafe_allow_html=True) #colocar antes dos filtros pra dar cor

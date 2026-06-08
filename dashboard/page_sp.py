@@ -210,7 +210,7 @@ with col_a:
     fig1 = px.bar(
         top_n[::-1], x='Total Abandono Escolar', y='Municipio', orientation='h',
         text='Total Abandono Escolar', color='Total Abandono Escolar',
-        color_continuous_scale='Reds',
+        color_continuous_scale="blues",
         labels={'Total Abandono Escolar': 'Evasão (%)', 'Municipio': ''},
     )
     fig1.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
@@ -241,6 +241,7 @@ with col_c:
         df_ano, x=infra_cor, y='Total Abandono Escolar',
         hover_name='Municipio', trendline='ols',
         labels={infra_cor: INFRA_LABELS[infra_cor] + ' (%)', 'Total Abandono Escolar': 'Evasão (%)'},
+        color='Total Abandono Escolar', color_continuous_scale='blues'
     )
     st.plotly_chart(fig3, use_container_width=True)
  
@@ -251,7 +252,7 @@ with col_d:
         .head(15).set_index('Municipio')[COLUNAS_INFRA]
         .rename(columns=INFRA_LABELS)
     )
-    fig4 = px.imshow(top15, color_continuous_scale='RdYlGn', zmin=0, zmax=100, aspect='auto', labels=dict(color='%'))
+    fig4 = px.imshow(top15, color_continuous_scale='blues', zmin=0, zmax=100, aspect='auto', labels=dict(color='%'))
     fig4.update_layout(xaxis=dict(tickangle=-30))
     st.plotly_chart(fig4, use_container_width=True)
  
@@ -268,7 +269,7 @@ corr_df = pd.DataFrame(list(corrs.items()), columns=['Infraestrutura', 'Correla�
 fig5 = px.bar(
     corr_df, x='Correlação', y='Infraestrutura', orientation='h',
     text='Correlação', color='Correlação',
-    color_continuous_scale='RdYlGn', range_color=[-0.5, 0.5],
+    color_continuous_scale='blues', range_color=[-0.5, 0.5],
 )
 fig5.update_traces(texttemplate='%{text:.3f}', textposition='outside')
 fig5.update_layout(coloraxis_showscale=False, margin=dict(r=60))

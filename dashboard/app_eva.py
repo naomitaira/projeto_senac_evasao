@@ -1,4 +1,3 @@
-from page_sp import carregar_dados
 import streamlit as st
 from utils_dados import carregar_dados
 
@@ -32,6 +31,15 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+span[data-baseweb="tag"] {
+  background-color: lavender !important;
+}
+</style>
+""", unsafe_allow_html=True) #colocar antes dos filtros pra dar cor
+
 # define paginas do menu
 paginas_sp = st.Page(
     "page_sp.py",
@@ -45,17 +53,10 @@ paginas_comparativo = st.Page(
     icon="📚"
 )
 
-paginas_comparativo_atualizado = st.Page(
-    "page_map_comp.py",
-    title="Comparativo de evasão escolar atualizado",
-    icon="🗺️"
-)
-
-
 # cria menu lateral para navegacao entre paginas
 
 menu = st.navigation(
-    [paginas_sp, paginas_comparativo, paginas_comparativo_atualizado])
+    [paginas_sp, paginas_comparativo])
 
 
 menu.run()

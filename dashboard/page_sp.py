@@ -165,6 +165,8 @@ if df_all.empty:
  
 # ─── FILTROS ───
  
+st.text("Selecione o ano, número de municípios e infraestrutura para análise:")
+
 col_f1, col_f2, col_f3 = st.columns(3)
 ano_sel   = col_f1.selectbox("Ano", sorted(df_all['Ano'].unique(), reverse=True))
 n_top     = col_f2.selectbox("Top municípios", [5, 10, 15, 20], index=1)

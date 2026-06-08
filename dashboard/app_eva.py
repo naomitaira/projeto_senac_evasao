@@ -1,4 +1,4 @@
-from sp.dashboard.page_sp import carregar_dados
+from page_sp import carregar_dados
 import streamlit as st
 from utils_dados import carregar_dados
 

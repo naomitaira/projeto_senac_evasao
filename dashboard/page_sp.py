@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from utils_dados import carregar_dados
-
+import os 
 
 st.markdown("""
 <style>

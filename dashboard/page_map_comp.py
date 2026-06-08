@@ -1,158 +1,134 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import json
 from pathlib import Path
-from utils_dados import carregar_dados
 
-CURRENT_DIR = Path(__file__).resolve().parent
-SP_DASHBOARD_DIR = Path(__file__).resolve().parents[2] / "sp" / "dashboard"
+st.set_page_config(layout="wide")
 
-LOCAL_GEOJSON_PATH = CURRENT_DIR / "brazil_municipios.geojson"
-if not LOCAL_GEOJSON_PATH.exists():
-    LOCAL_GEOJSON_PATH = SP_DASHBOARD_DIR / "brazil_municipios.geojson"
+st.title("Mapa do Censo Escolar por Município")
 
-DATA_DIR = Path(__file__).resolve().parents[2] / "dados_evasao"
+# ==========================
+# Caminhos
+# ==========================
 
-FILES = {
+BASE_DIR = Path(_file_).resolve().parent.parent
+
+DATA_DIR = BASE_DIR / "dados_evasao"
+GEOJSON_PATH = BASE_DIR / "dashboard" / "brazil_municipios.geojson"
+
+ARQUIVOS = {
     2022: DATA_DIR / "censo_escolar_brasil_2022.xlsx",
     2023: DATA_DIR / "censo_escolar_brasil_2023.xlsx",
     2024: DATA_DIR / "censo_escolar_brasil_2024.xlsx",
 }
 
-st.set_page_config(layout="wide")
-st.title("Mapa comparativo — Censo Escolar (Brasil 2022-2024) 🗺")
+# ==========================
+# Seleção do ano
+# ==========================
 
-st.markdown(
-    """
-    Esta página cria um mapa choropleth comparativo entre os anos de 2022, 2023 e 2024
-    usando os arquivos `censo_escolar_brasil_YYYY.xlsx` da pasta `dados_evasao`.
-    """
+ano = st.sidebar.selectbox(
+    "Selecione o ano",
+    [2022, 2023, 2024],
+    index=2
 )
 
+arquivo_excel = ARQUIVOS[ano]
 
-def detect_code_column(df: pd.DataFrame) -> str | None:
-    candidates = [c for c in df.columns if re.search(r'cod|codigo|id', c, re.I) and re.search(r'mun|municip', c, re.I)]
-    if candidates:
-        return candidates[0]
-    # fallback: any column with mostly numeric values and length >=6
-    for c in df.columns:
-        ser = df[c].astype(str).str.replace(r'\D', '', regex=True)
-        if ser.str.len().median() >= 6 and ser.str.isnumeric().mean() > 0.6:
-            return c
-    return None
+if not arquivo_excel.exists():
+    st.error(f"Arquivo não encontrado:\n{arquivo_excel}")
+    st.stop()
 
+if not GEOJSON_PATH.exists():
+    st.error(f"GeoJSON não encontrado:\n{GEOJSON_PATH}")
+    st.stop()
 
-def clean_code_series(s: pd.Series) -> pd.Series:
-    s2 = s.astype(str).str.replace(r'\D', '', regex=True)
-    return s2.str.zfill(7)
+# ==========================
+# Leitura do Excel
+# ==========================
 
+df = pd.read_excel(arquivo_excel)
 
-def load_and_prepare(path: Path, year: int) -> pd.DataFrame:
-    if not path.exists():
-        return pd.DataFrame()
+st.sidebar.markdown("### Configuração")
 
-    # read a sample to detect columns
-    try:
-        sample = pd.read_excel(path, nrows=200)
-    except Exception as e:
-        st.warning(f"Erro lendo {path.name}: {e}")
-        return pd.DataFrame()
+codigo_col = st.sidebar.selectbox(
+    "Coluna do código IBGE",
+    df.columns
+)
 
-    code_col = detect_code_column(sample)
-    if code_col is None:
-        st.error(f"Não foi possível detectar coluna de código IBGE em {path.name}.")
-        return pd.DataFrame()
+valor_col = st.sidebar.selectbox(
+    "Coluna para exibir no mapa",
+    df.columns
+)
 
-    # read full file but only necessary columns
-    usecols = [code_col]
-    # try to include numeric columns as candidates for metric
-    for c in sample.select_dtypes(include=[np.number]).columns[:6]:
-        if c not in usecols:
-            usecols.append(c)
+# ==========================
+# Tratamento
+# ==========================
 
-    df = pd.read_excel(path, usecols=usecols)
+df["cod_ibge"] = (
+    df[codigo_col]
+    .astype(str)
+    .str.replace(r"\D", "", regex=True)
+    .str.zfill(7)
+)
 
-    df = df.rename(columns={code_col: 'cod_ibge'})
-    df['cod_ibge'] = clean_code_series(df['cod_ibge'])
+df["valor"] = pd.to_numeric(
+    df[valor_col],
+    errors="coerce"
+)
 
-    # find numeric column to visualize (default: first numeric)
-    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-    numeric_cols = [c for c in numeric_cols if c != 'cod_ibge']
+df = df.dropna(subset=["valor"])
 
-    if not numeric_cols:
-        st.error(f"Nenhuma coluna numérica detectada em {path.name} para visualização.")
-        return pd.DataFrame()
+# Caso existam registros repetidos por município
+df = (
+    df.groupby("cod_ibge", as_index=False)["valor"]
+    .mean()
+)
 
-    # take the first numeric column as default metric
-    metric = numeric_cols[0]
+# ==========================
+# GeoJSON
+# ==========================
 
-    df = df[['cod_ibge', metric]].copy()
-    df = df.dropna(subset=['cod_ibge'])
-    df[metric] = pd.to_numeric(df[metric], errors='coerce')
-    df = df.dropna(subset=[metric])
-    df = df.groupby('cod_ibge', as_index=False)[metric].mean()
-    df = df.rename(columns={metric: 'value'})
-    df['Year'] = year
-    return df
+with open(GEOJSON_PATH, "r", encoding="utf-8") as f:
+    geojson = json.load(f)
 
+# Mostra as propriedades disponíveis
+propriedades = list(
+    geojson["features"][0]["properties"].keys()
+)
 
-def main():
-    if not LOCAL_GEOJSON_PATH.exists():
-        st.error(f"GeoJSON de municípios não encontrado: {LOCAL_GEOJSON_PATH}")
-        st.stop()
+campo_geojson = st.sidebar.selectbox(
+    "Campo do GeoJSON",
+    propriedades
+)
 
-    dfs = []
-    for year, path in FILES.items():
-        if path.exists():
-            d = load_and_prepare(path, year)
-            if not d.empty:
-                dfs.append(d)
-        else:
-            st.info(f"Arquivo ausente: {path.name}")
+# ==========================
+# Mapa
+# ==========================
 
-    if not dfs:
-        st.error("Nenhum dado carregado. Verifique os arquivos em dados_evasao.")
-        st.stop()
+fig = px.choropleth(
+    df,
+    geojson=geojson,
+    locations="cod_ibge",
+    featureidkey=f"properties.{campo_geojson}",
+    color="valor",
+    color_continuous_scale="OrRd",
+    title=f"Mapa do Censo Escolar - {ano}"
+)
 
-    df_all = pd.concat(dfs, ignore_index=True)
+fig.update_geos(
+    fitbounds="locations",
+    visible=False
+)
 
-    # load geojson
-    with open(LOCAL_GEOJSON_PATH, 'r', encoding='utf-8') as f:
-        geo = json.load(f)
+st.plotly_chart(
+    fig,
+    use_container_width=True
+)
 
-    # allow user controls
-    agg = st.sidebar.selectbox('Agregação', ['mean', 'sum'], index=0)
-    years = sorted(df_all['Year'].unique())
-    sel_years = st.sidebar.multiselect('Anos para exibir (se vazio: todos)', years, default=years)
+# ==========================
+# Prévia dos dados
+# ==========================
 
-    if sel_years:
-        df_plot = df_all[df_all['Year'].isin(sel_years)].copy()
-    else:
-        df_plot = df_all.copy()
-
-    if agg == 'sum':
-        df_plot = df_plot.groupby(['cod_ibge', 'Year'], as_index=False)['value'].sum()
-    else:
-        df_plot = df_plot.groupby(['cod_ibge', 'Year'], as_index=False)['value'].mean()
-
-    # Plotly choropleth expects locations matching geojson properties; this geojson uses 'codarea'
-    fig = px.choropleth(
-        df_plot,
-        geojson=geo,
-        locations='cod_ibge',
-        color='value',
-        featureidkey='properties.codarea',
-        animation_frame='Year',
-        color_continuous_scale='OrRd',
-        labels={'value': 'Valor'},
-        title='Mapa comparativo por município'
-    )
-
-    fig.update_geos(fitbounds='locations', visible=False)
-    fig.update_layout(margin={'r':0,'t':30,'l':0,'b':0})
-
-    st.plotly_chart(fig, use_container_width=True)
-
-
-if __name__ == '__main__':
-    main()
+with st.expander("Visualizar dados"):
+    st.dataframe(df.head(20))

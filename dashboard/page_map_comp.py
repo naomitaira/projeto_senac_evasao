@@ -12,7 +12,7 @@ st.title("Mapa do Censo Escolar por Município")
 # Caminhos
 # ==========================
 
-BASE_DIR = Path(_file_).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 DATA_DIR = BASE_DIR / "dados_evasao"
 GEOJSON_PATH = BASE_DIR / "dashboard" / "brazil_municipios.geojson"

@@ -1,4 +1,4 @@
-from dashboard.page_sp import carregar_dados
+from page_sp import carregar_dados
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -100,7 +100,7 @@ def load_region_abandono(path: Path):
 # CARREGAR DADOS
 # ============================
 
-DATA_DIR = ROOT_DIR / "dados_tratados"
+DATA_DIR = Path("/Documents/projeto_senac_evasao/dados_tratados")
 df_all = load_all(DATA_DIR)
 
 if df_all.empty:

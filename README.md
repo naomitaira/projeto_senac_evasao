@@ -85,9 +85,3 @@ Tecnologias / linguagens utilizadas
 - JSON — GeoJSON para polígonos (`.json`).
 - CSV / Excel — formatos de entrada (`.csv`, `.xlsx`).
 - PowerShell / shell — comandos para ativar venv e rodar Streamlit no Windows.
-
-Próximos passos sugeridos
--------------------------
-- Melhorar heurísticas de normalização de nomes (remoção de sufixos, abreviações) caso municípios fiquem sem correspondência.
-- Ajustar rótulos e escalas do mapa para representar métricas de infraestrutura conforme necessário.
-- Rodar localmente e validar cobertura de correspondência entre `geojs-sao-paulo.json` e `ibge_municipios.csv`.

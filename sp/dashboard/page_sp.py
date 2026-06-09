@@ -48,7 +48,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ─── DADOS ───
+####### DADOS #######
  
 COLUNAS_INFRA = [
     'Acesso à internet para alunos',
@@ -96,7 +96,7 @@ def carregar_dados():
  
 abandono, df_all = carregar_dados()
  
-# ─── TÍTULO ───
+# ####### TÍTULO #######
  
 st.markdown("""
 <style>
@@ -116,7 +116,7 @@ if df_all.empty:
     st.warning("Arquivos não encontrados. Rode o script de processamento primeiro.")
     st.stop()
  
-# ─── FILTROS ───
+# ####### FILTROS #######
  
 col_f1, col_f2, col_f3 = st.columns(3)
 ano_sel   = col_f1.selectbox("Ano", sorted(df_all['Ano'].unique(), reverse=True))
@@ -128,7 +128,7 @@ st.divider()
 df_ano = df_all[df_all['Ano'] == ano_sel].copy()
 anos_disp = sorted(df_all['Ano'].unique())
  
-# ─── KPIs ───
+# ####### KPIs #######
  
 media_atual = df_ano['Total Abandono Escolar'].mean()
 delta = None
@@ -140,6 +140,7 @@ pior_mun = df_ano.loc[df_ano['Total Abandono Escolar'].idxmax(), 'Municipio']
 pior_val = df_ano['Total Abandono Escolar'].max()
  
 # infra com menor acesso médio — aponta o recurso mais deficiente
+
 media_infra = df_ano[COLUNAS_INFRA].mean()
 pior_infra_col = media_infra.idxmin()
 pior_infra_val = media_infra.min()
@@ -151,7 +152,7 @@ k3.metric("Infra mais deficiente", INFRA_LABELS[pior_infra_col], delta=f"{pior_i
  
 st.divider()
  
-# ─── RANKING + EVOLUÇÃO ───
+# ####### RANKING + EVOLUÇÃO #######
  
 col_a, col_b = st.columns(2)
  
@@ -182,7 +183,7 @@ with col_b:
  
 st.divider()
  
-# ─── SCATTER + HEATMAP ───
+# ####### HEATMAP #######
  
 # col_c, col_d = st.columns(2)
  
@@ -208,7 +209,7 @@ st.plotly_chart(fig4, use_container_width=True)
  
 st.divider()
  
-# ─── CORRELAÇÕES ───
+# ####### CORRELAÇÕES #######
  
 st.subheader("Correlação entre evasão e infraestrutura")
 corrs = {

@@ -30,14 +30,14 @@ st.set_page_config(
 paginas_sp = st.Page(
     "page_sp.py", title="Evasão escolar de São Paulo", icon="📌") 
 
-paginas_comparativo= st.Page(
-    "page_comp.py", title="Comparativo de evasão escolar", icon="🇧🇷")
+paginas_mapa= st.Page(
+    "page_mapa.py", title="Mapa de evasão escolar", icon="🗺️")
 
 
 # cria menu lateral para navegacao entre paginas
 
 menu = st.navigation(
-    [paginas_sp, paginas_comparativo])
+    [paginas_sp, paginas_mapa])
 
 
 menu.run()

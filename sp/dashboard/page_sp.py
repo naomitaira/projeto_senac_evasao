@@ -184,27 +184,27 @@ st.divider()
  
 # ─── SCATTER + HEATMAP ───
  
-col_c, col_d = st.columns(2)
+# col_c, col_d = st.columns(2)
  
-with col_c:
-    st.subheader(f"Evasão x {INFRA_LABELS[infra_cor]}")
-    fig3 = px.scatter(
-        df_ano, x=infra_cor, y='Total Abandono Escolar',
-        hover_name='Municipio', trendline='ols',
-        labels={infra_cor: INFRA_LABELS[infra_cor] + ' (%)', 'Total Abandono Escolar': 'Evasão (%)'},
-    )
-    st.plotly_chart(fig3, use_container_width=True)
+# with col_c:
+#     st.subheader(f"Evasão x {INFRA_LABELS[infra_cor]}")
+#     fig3 = px.scatter(
+#         df_ano, x=infra_cor, y='Total Abandono Escolar',
+#         hover_name='Municipio', trendline='ols',
+#         labels={infra_cor: INFRA_LABELS[infra_cor] + ' (%)', 'Total Abandono Escolar': 'Evasão (%)'},
+#     )
+#     st.plotly_chart(fig3, use_container_width=True)
  
-with col_d:
-    st.subheader("Infraestrutura — top municípios")
-    top15 = (
+st.subheader("Infraestrutura — top municípios")
+top15 = (
         df_ano.sort_values('Total Abandono Escolar', ascending=False)
         .head(15).set_index('Municipio')[COLUNAS_INFRA]
         .rename(columns=INFRA_LABELS)
     )
-    fig4 = px.imshow(top15, color_continuous_scale='RdYlGn', zmin=0, zmax=100, aspect='auto', labels=dict(color='%'))
-    fig4.update_layout(xaxis=dict(tickangle=-30))
-    st.plotly_chart(fig4, use_container_width=True)
+    
+fig4 = px.imshow(top15, color_continuous_scale='RdYlGn', zmin=0, zmax=100, aspect='auto', labels=dict(color='%'))
+fig4.update_layout(xaxis=dict(tickangle=-30))
+st.plotly_chart(fig4, use_container_width=True)
  
 st.divider()
  

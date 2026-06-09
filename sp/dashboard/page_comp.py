@@ -5,8 +5,19 @@ from pathlib import Path
 import json
 import unicodedata
 
-LOCAL_GEOJSON_PATH = Path(__file__).resolve().parent / "brazil_municipios.geojson"
-LOCAL_IBGE_MUNICIPIOS_PATH = Path(__file__).resolve().parent / "ibge_municipios.csv"
+CURRENT_DIR = Path(__file__).resolve().parent
+SP_DASHBOARD_DIR = Path(__file__).resolve().parents[2] / "sp" / "dashboard"
+
+LOCAL_GEOJSON_PATH = CURRENT_DIR / "brazil_municipios.geojson"
+LOCAL_IBGE_MUNICIPIOS_PATH = CURRENT_DIR / "ibge_municipios.csv"
+if not LOCAL_GEOJSON_PATH.exists():
+    LOCAL_GEOJSON_PATH = SP_DASHBOARD_DIR / "brazil_municipios.geojson"
+if not LOCAL_IBGE_MUNICIPIOS_PATH.exists():
+    LOCAL_IBGE_MUNICIPIOS_PATH = SP_DASHBOARD_DIR / "ibge_municipios.csv"
+
+REGIONAL_DATA_PATH = Path(__file__).resolve().parents[2] / "dados_evasao" / "AbandonoEscolar_RendaMedia_2013_2023.csv"
+
+motivos_df = None
 
 st.set_page_config(layout="wide")
 
@@ -116,6 +127,46 @@ def load_all(dados_dir: Path):
         )
 
     return pd.DataFrame()
+
+
+STATE_TO_REGION = {
+    "11": "Norte", "12": "Norte", "13": "Norte", "14": "Norte", "15": "Norte", "16": "Norte", "17": "Norte",
+    "21": "Nordeste", "22": "Nordeste", "23": "Nordeste", "24": "Nordeste", "25": "Nordeste", "26": "Nordeste", "27": "Nordeste", "28": "Nordeste", "29": "Nordeste",
+    "31": "Sudeste", "32": "Sudeste", "33": "Sudeste", "35": "Sudeste",
+    "41": "Sul", "42": "Sul", "43": "Sul",
+    "50": "Centro-Oeste", "51": "Centro-Oeste", "52": "Centro-Oeste", "53": "Centro-Oeste",
+}
+
+
+def load_region_abandono(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+
+    df = pd.read_csv(
+        path,
+        sep=',',
+        encoding='utf-8',
+        engine='python'
+    )
+
+    df = df[
+        (df["Regiao"] == "Brasil")
+        & (df["Localizacao"] == "Total")
+        & (df["Dependencia_Administrativa"] == "Total")
+        & (df["Grupo_de_Abandono"] == "Ensino Fundamental")
+    ].copy()
+
+    df["Unidade_Geografica"] = df["Unidade_Geografica"].astype(str).str.strip()
+    df["Taxa_Abandono"] = pd.to_numeric(df["Taxa_Abandono"], errors="coerce")
+    df = df[df["Unidade_Geografica"].isin([
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste",
+        "Sul"
+    ])]
+
+    return df
 
 
 # ==========================
@@ -291,16 +342,117 @@ with col_dir:
         ranking,
         use_container_width=True,
         hide_index=True
+    )   
+
+
+# ==========================
+# MAPA REGIONAL DO BRASIL
+# ==========================
+
+REGIONAL_DF = load_region_abandono(REGIONAL_DATA_PATH)
+
+st.subheader("Comparativo nacional por região")
+
+if REGIONAL_DF.empty:
+    st.warning(
+        "Dados regionais não encontrados. Verifique o arquivo "
+        f"{REGIONAL_DATA_PATH}"
+    )
+else:
+    region_year = st.selectbox(
+        "Ano para comparativo regional",
+        sorted(REGIONAL_DF["Ano"].unique(), reverse=True),
+        index=0
     )
 
-    # Opcional: upload de motivos (CSV com colunas Municipio;Motivo) => encontre uma maneira de fazer isso 
-   
+    df_region_year = REGIONAL_DF[
+        REGIONAL_DF["Ano"] == region_year
+    ].copy()
 
-## ==========================
-## MAPA BRASIL - TOP 20
-## ==========================
+    fig_region_bar = px.bar(
+        df_region_year,
+        x="Unidade_Geografica",
+        y="Taxa_Abandono",
+        color="Unidade_Geografica",
+        text=df_region_year["Taxa_Abandono"].round(2),
+        labels={
+            "Unidade_Geografica": "Região",
+            "Taxa_Abandono": "Taxa de Abandono (%)"
+        }
+    )
+    fig_region_bar.update_layout(
+        showlegend=False,
+        xaxis_tickangle=-45,
+        margin={"r":0,"t":30,"l":0,"b":0}
+    )
+    st.plotly_chart(fig_region_bar, use_container_width=True)
 
-st.subheader("Mapa do Brasil - Top municípios por evasão")
+    fig_region_line = px.line(
+        REGIONAL_DF,
+        x="Ano",
+        y="Taxa_Abandono",
+        color="Unidade_Geografica",
+        markers=True,
+        labels={
+            "Ano": "Ano",
+            "Taxa_Abandono": "Taxa de Abandono (%)",
+            "Unidade_Geografica": "Região"
+        }
+    )
+    st.plotly_chart(fig_region_line, use_container_width=True)
+
+    if LOCAL_GEOJSON_PATH.exists() and LOCAL_IBGE_MUNICIPIOS_PATH.exists():
+        try:
+            df_ibge_all = pd.read_csv(
+                LOCAL_IBGE_MUNICIPIOS_PATH,
+                dtype=str,
+                encoding='utf-8',
+                engine='python'
+            )
+            df_ibge_all['Regiao'] = df_ibge_all['id'].str[:2].map(STATE_TO_REGION)
+            df_ibge_all = df_ibge_all[
+                df_ibge_all['Regiao'].notna()
+            ].copy()
+            region_rates = dict(
+                zip(
+                    df_region_year["Unidade_Geografica"],
+                    df_region_year["Taxa_Abandono"]
+                )
+            )
+            df_ibge_all["Taxa_Abandono"] = df_ibge_all["Regiao"].map(region_rates)
+
+            geojson_region = None
+            try:
+                with open(LOCAL_GEOJSON_PATH, encoding='utf-8') as f:
+                    geojson_region = json.load(f)
+                for feat in geojson_region.get('features', []):
+                    props = feat.setdefault('properties', {})
+                    if 'codarea' in props:
+                        props['codarea'] = str(props['codarea'])
+            except Exception:
+                geojson_region = None
+
+            if geojson_region is not None and df_ibge_all['Taxa_Abandono'].notna().any():
+                fig_region_map = px.choropleth(
+                    df_ibge_all,
+                    geojson=geojson_region,
+                    locations='id',
+                    color='Taxa_Abandono',
+                    hover_name='Regiao',
+                    hover_data=['Regiao'],
+                    featureidkey='properties.codarea',
+                    projection='mercator',
+                    color_continuous_scale='OrRd',
+                    labels={"Taxa_Abandono": "Taxa de Abandono (%)"}
+                )
+                fig_region_map.update_geos(fitbounds='locations', visible=False)
+                fig_region_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+                st.plotly_chart(fig_region_map, use_container_width=True)
+            else:
+                st.info("Não foi possível gerar o mapa regional com os dados disponíveis.")
+        except Exception as exc:
+            st.warning(f"Erro ao gerar o mapa regional: {exc}")
+
 
 map_year = st.selectbox(
     "Ano para mapa",

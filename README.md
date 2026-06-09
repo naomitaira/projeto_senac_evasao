@@ -1,6 +1,10 @@
 Projeto: Evasão Escolar — Painel e Análises
 
 Descrição
+
+Projeto: Evasão Escolar — Painel e Análises
+
+Descrição
 - Aplicação Streamlit para comparar taxas de abandono escolar (2022–2024), gerar métricas e mapas.
 
 Principais arquivos
@@ -49,6 +53,48 @@ Notas importantes
 Alterações realizadas durante a sessão
 - `dashboard/page_comp.py`: refatorado e adicionado mapa (codarea / UF / fallback por nome).
 - `dashboard/app_eva.py`: removido import de página que executava código no import time.
+
+---
+
+Resumo das alterações realizadas nesta sessão
+-----------------------------------------
+- Centralização do mapa para a região de São Paulo (controle via checkbox `foco_sp`).
+- Filtragem para manter somente municípios do estado de São Paulo quando o arquivo `sp/dashboard/ibge_municipios.csv` estiver disponível.
+- Métricas do mapa alteradas para priorizar indicadores de infraestrutura (média de acesso por tipo de infraestrutura; exibição da infraestrutura mais desenvolvida e da mais deficiente).
+- Preferência pelo GeoJSON de São Paulo: `sp/dashboard/geojs-sao-paulo.json`.
+- Implementação robusta de mapeamento entre dados e GeoJSON:
+	1. Merge por código IBGE (`id`) usando `ibge_municipios.csv`.
+	2. Fallback por nome de município com normalização (remoção de acentos, padronização de maiúsculas/espacos).
+- Correções de bugs:
+	- ` _normalize` movida para escopo global para evitar `NameError`.
+	- `map_center` e `map_zoom` definidos para evitar `NameError` no plot.
+	- Bloco de GeoJSON/plot substituído por rotina limpa e testável.
+
+Arquivos relevantes
+------------------
+- `dashboard/page_mapa.py` — página do mapa (foco SP, métricas, merge com GeoJSON).
+- `dashboard/utils_dados.py` — carregamento de dados e tratamento de infraestrutura.
+- `sp/dashboard/geojs-sao-paulo.json` — GeoJSON municipal de São Paulo (usado quando presente).
+- `sp/dashboard/ibge_municipios.csv` — CSV do IBGE para mapeamento por código.
+- `sp/dados_limpos/relacao_evasao_infraestrutura_*.xlsx` — fontes de infraestrutura (2022–2024).
+
+Tecnologias / linguagens utilizadas
+----------------------------------
+- Python — aplicação e análise (Streamlit, pandas, plotly.express).
+- SQL — scripts em `banco_dados/` (dumps e queries auxiliares).
+- JSON — GeoJSON para polígonos (`.json`).
+- CSV / Excel — formatos de entrada (`.csv`, `.xlsx`).
+- PowerShell / shell — comandos para ativar venv e rodar Streamlit no Windows.
+
+Próximos passos sugeridos
+-------------------------
+- Melhorar heurísticas de normalização de nomes (remoção de sufixos, abreviações) caso municípios fiquem sem correspondência.
+- Ajustar rótulos e escalas do mapa para representar métricas de infraestrutura conforme necessário.
+- Rodar localmente e validar cobertura de correspondência entre `geojs-sao-paulo.json` e `ibge_municipios.csv`.
+
+---
+
+Se quiser, posso também traduzir este README para inglês ou integrar diretamente todo o conteúdo no README principal.
 
 Próximos passos sugeridos
 - Melhorar heurísticas de normalização de nomes (remoção de sufixos, abreviações) caso muitos municípios fiquem sem correspondência.

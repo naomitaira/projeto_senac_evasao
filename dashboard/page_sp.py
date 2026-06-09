@@ -230,34 +230,7 @@ with col_b:
     st.plotly_chart(fig2, use_container_width=True)
  
 st.divider()
- 
-# ─── SCATTER + HEATMAP ───
- 
-col_c, col_d = st.columns(2)
- 
-with col_c:
-    st.subheader(f"Evasão x {INFRA_LABELS[infra_cor]}")
-    fig3 = px.scatter(
-        df_ano, x=infra_cor, y='Total Abandono Escolar',
-        hover_name='Municipio', trendline='ols',
-        labels={infra_cor: INFRA_LABELS[infra_cor] + ' (%)', 'Total Abandono Escolar': 'Evasão (%)'},
-        color='Total Abandono Escolar', color_continuous_scale='blues'
-    )
-    st.plotly_chart(fig3, use_container_width=True)
- 
-with col_d:
-    st.subheader("Infraestrutura — top municípios")
-    top15 = (
-        df_ano.sort_values('Total Abandono Escolar', ascending=False)
-        .head(15).set_index('Municipio')[COLUNAS_INFRA]
-        .rename(columns=INFRA_LABELS)
-    )
-    fig4 = px.imshow(top15, color_continuous_scale='blues', zmin=0, zmax=100, aspect='auto', labels=dict(color='%'))
-    fig4.update_layout(xaxis=dict(tickangle=-30))
-    st.plotly_chart(fig4, use_container_width=True)
- 
-st.divider()
- 
+
 # ─── CORRELAÇÕES ───
  
 st.subheader("Correlação entre evasão e infraestrutura")
@@ -274,3 +247,31 @@ fig5 = px.bar(
 fig5.update_traces(texttemplate='%{text:.3f}', textposition='outside')
 fig5.update_layout(coloraxis_showscale=False, margin=dict(r=60))
 st.plotly_chart(fig5, use_container_width=True)
+ 
+# ───  HEATMAP ───
+ 
+# col_c, col_d = st.columns(2)
+ 
+# with col_c:
+#     st.subheader(f"Evasão x {INFRA_LABELS[infra_cor]}")
+#     fig3 = px.scatter(
+#         df_ano, x=infra_cor, y='Total Abandono Escolar',
+#         hover_name='Municipio', trendline='ols',
+#         labels={infra_cor: INFRA_LABELS[infra_cor] + ' (%)', 'Total Abandono Escolar': 'Evasão (%)'},
+#         color='Total Abandono Escolar', color_continuous_scale='blues'
+#     )
+#     st.plotly_chart(fig3, use_container_width=True)
+ 
+# with col_d:
+st.subheader("Infraestrutura — top municípios")
+top15 = (
+        df_ano.sort_values('Total Abandono Escolar', ascending=False)
+        .head(15).set_index('Municipio')[COLUNAS_INFRA]
+        .rename(columns=INFRA_LABELS)
+    )
+fig4 = px.imshow(top15, color_continuous_scale='blues', zmin=0, zmax=100, aspect='auto', labels=dict(color='%'))
+fig4.update_layout(xaxis=dict(tickangle=-30))
+st.plotly_chart(fig4, use_container_width=True)
+ 
+st.divider()
+ 

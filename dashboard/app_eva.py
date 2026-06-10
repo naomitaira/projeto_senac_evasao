@@ -3,8 +3,10 @@ from utils_dados import carregar_dados
 
 BASE_DIR = "sp/dados_limpos"
 abandono, df_all = None, carregar_dados(BASE_DIR)
-
+print("Dados carregados com sucesso!")  # Verificação de carregamento
 if df_all.empty:
+    print(BASE_DIR)
+    print("Erro: O DataFrame está vazio. Verifique os arquivos de dados.")
     st.warning("Arquivos não encontrados. Rode o script de processamento primeiro.")
     st.stop()
 # configura a pagina do streamlit

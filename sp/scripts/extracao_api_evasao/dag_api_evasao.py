@@ -27,7 +27,7 @@ with DAG(
     )
 
 
-    # tarefa para transformar os dados extraidos da API Fruityvice
+    # tarefa para transformar os dados extraidos da API
     task_transformar_dados = PythonOperator(
         task_id='transformar_dados',
         python_callable=transformar_dados
